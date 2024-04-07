@@ -1,0 +1,14 @@
+
+// Sections App
+
+// - ExampleText
+
+"welcome_title" = "Welcome";
+
+// - Errors
+
+"error_title" = "Alert";
+"error_ok" = "OK";
+"error_generic" = "An error has occurred. Please try another time";
+"error_no_internet_connection" = "There is no Internet conection";
+"error_credential" = "The username or password is not correct";

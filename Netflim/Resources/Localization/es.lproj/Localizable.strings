@@ -1,0 +1,14 @@
+
+// Sections App
+
+// - ExampleText
+
+"welcome_title" = "Bienvenido";
+
+// - Errors
+
+"error_title" = "Alerta";
+"error_ok" = "OK";
+"error_generic" = "Se ha producido un error. Por favor, pruebe en otro momento";
+"error_no_internet_connection" = "No hay conexión a internet";
+"error_credential" = "El usuario o la contraseña no son correctas";
