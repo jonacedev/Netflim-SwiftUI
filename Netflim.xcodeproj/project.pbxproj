@@ -48,6 +48,16 @@
 		AB181E6C2BC32FDE00BD002E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB181E6B2BC32FDE00BD002E /* Preview Assets.xcassets */; };
 		AB181E742BC3300100BD002E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AB181E732BC3300100BD002E /* Alamofire */; };
 		AB181E772BC3301000BD002E /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = AB181E762BC3301000BD002E /* KeychainAccess */; };
+		AB181E7B2BC34AB600BD002E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AB181E7A2BC34AB600BD002E /* Lottie */; };
+		AB181E7D2BC34B0800BD002E /* netflix_anim.json in Resources */ = {isa = PBXBuildFile; fileRef = AB181E7C2BC34B0800BD002E /* netflix_anim.json */; };
+		AB181E822BC34E2900BD002E /* ProfileSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E7F2BC34E2900BD002E /* ProfileSelectorView.swift */; };
+		AB181E832BC34E2900BD002E /* ProfileSelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E802BC34E2900BD002E /* ProfileSelectorViewModel.swift */; };
+		AB181E842BC34E2900BD002E /* ProfileSelectorWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E812BC34E2900BD002E /* ProfileSelectorWireframe.swift */; };
+		AB181E882BC3589900BD002E /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E872BC3589900BD002E /* ProfileModel.swift */; };
+		AB181E8D2BC35A6300BD002E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E8A2BC35A6300BD002E /* HomeView.swift */; };
+		AB181E8E2BC35A6300BD002E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E8B2BC35A6300BD002E /* HomeViewModel.swift */; };
+		AB181E8F2BC35A6300BD002E /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E8C2BC35A6300BD002E /* HomeWireframe.swift */; };
+		AB181E942BC36B7700BD002E /* ProfileSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E932BC36B7600BD002E /* ProfileSelectorCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,7 +101,16 @@
 		AB181E622BC32FDD00BD002E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB181E682BC32FDE00BD002E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB181E6B2BC32FDE00BD002E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AB181E782BC3308800BD002E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AB181E782BC3308800BD002E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB181E7C2BC34B0800BD002E /* netflix_anim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = netflix_anim.json; sourceTree = "<group>"; };
+		AB181E7F2BC34E2900BD002E /* ProfileSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelectorView.swift; sourceTree = "<group>"; };
+		AB181E802BC34E2900BD002E /* ProfileSelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelectorViewModel.swift; sourceTree = "<group>"; };
+		AB181E812BC34E2900BD002E /* ProfileSelectorWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelectorWireframe.swift; sourceTree = "<group>"; };
+		AB181E872BC3589900BD002E /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		AB181E8A2BC35A6300BD002E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AB181E8B2BC35A6300BD002E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		AB181E8C2BC35A6300BD002E /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
+		AB181E932BC36B7600BD002E /* ProfileSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelectorCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +120,7 @@
 			files = (
 				AB181E772BC3301000BD002E /* KeychainAccess in Frameworks */,
 				AB181E742BC3300100BD002E /* Alamofire in Frameworks */,
+				AB181E7B2BC34AB600BD002E /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,11 +146,9 @@
 		AB181E062BC32FDD00BD002E /* Netflim */ = {
 			isa = PBXGroup;
 			children = (
-				AB181E782BC3308800BD002E /* Info.plist */,
-				AB181E622BC32FDD00BD002E /* AppDelegate.swift */,
-				AB181E682BC32FDE00BD002E /* Assets.xcassets */,
-				AB181E072BC32FDD00BD002E /* Resources */,
+				AB181E952BC3C1B400BD002E /* App */,
 				AB181E0B2BC32FDD00BD002E /* Code */,
+				AB181E072BC32FDD00BD002E /* Resources */,
 				AB181E6A2BC32FDE00BD002E /* Preview Content */,
 			);
 			path = Netflim;
@@ -139,6 +157,8 @@
 		AB181E072BC32FDD00BD002E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AB181E682BC32FDE00BD002E /* Assets.xcassets */,
+				AB181E7E2BC34D0900BD002E /* Animations */,
 				AB181E592BC32FDD00BD002E /* Localization */,
 			);
 			path = Resources;
@@ -148,7 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				AB181E0C2BC32FDD00BD002E /* Common */,
-				AB181E2A2BC32FDD00BD002E /* Config */,
 				AB181E2F2BC32FDD00BD002E /* Api */,
 				AB181E4F2BC32FDD00BD002E /* Modules */,
 			);
@@ -241,6 +260,8 @@
 		AB181E4F2BC32FDD00BD002E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AB181E892BC35A5600BD002E /* Home */,
+				AB181E852BC34E2D00BD002E /* ProfileSelector */,
 				AB181E502BC32FDD00BD002E /* Launch */,
 			);
 			path = Modules;
@@ -290,6 +311,62 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		AB181E7E2BC34D0900BD002E /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				AB181E7C2BC34B0800BD002E /* netflix_anim.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		AB181E852BC34E2D00BD002E /* ProfileSelector */ = {
+			isa = PBXGroup;
+			children = (
+				AB181E922BC36B5400BD002E /* Cell */,
+				AB181E862BC3587C00BD002E /* Model */,
+				AB181E7F2BC34E2900BD002E /* ProfileSelectorView.swift */,
+				AB181E802BC34E2900BD002E /* ProfileSelectorViewModel.swift */,
+				AB181E812BC34E2900BD002E /* ProfileSelectorWireframe.swift */,
+			);
+			path = ProfileSelector;
+			sourceTree = "<group>";
+		};
+		AB181E862BC3587C00BD002E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB181E872BC3589900BD002E /* ProfileModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AB181E892BC35A5600BD002E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AB181E8A2BC35A6300BD002E /* HomeView.swift */,
+				AB181E8B2BC35A6300BD002E /* HomeViewModel.swift */,
+				AB181E8C2BC35A6300BD002E /* HomeWireframe.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		AB181E922BC36B5400BD002E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AB181E932BC36B7600BD002E /* ProfileSelectorCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		AB181E952BC3C1B400BD002E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AB181E782BC3308800BD002E /* Info.plist */,
+				AB181E622BC32FDD00BD002E /* AppDelegate.swift */,
+				AB181E2A2BC32FDD00BD002E /* Config */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -309,6 +386,7 @@
 			packageProductDependencies = (
 				AB181E732BC3300100BD002E /* Alamofire */,
 				AB181E762BC3301000BD002E /* KeychainAccess */,
+				AB181E7A2BC34AB600BD002E /* Lottie */,
 			);
 			productName = Netflim;
 			productReference = AB181E042BC32FDD00BD002E /* Netflim.app */;
@@ -342,6 +420,7 @@
 			packageReferences = (
 				AB181E722BC3300100BD002E /* XCRemoteSwiftPackageReference "Alamofire" */,
 				AB181E752BC3301000BD002E /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				AB181E792BC34AB600BD002E /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = AB181E052BC32FDD00BD002E /* Products */;
 			projectDirPath = "";
@@ -360,6 +439,7 @@
 				AB181E612BC32FDD00BD002E /* es in Resources */,
 				AB181E2E2BC32FDD00BD002E /* Config.plist in Resources */,
 				AB181E5D2BC32FDD00BD002E /* en in Resources */,
+				AB181E7D2BC34B0800BD002E /* netflix_anim.json in Resources */,
 				AB181E6C2BC32FDE00BD002E /* Preview Assets.xcassets in Resources */,
 				AB181E522BC32FDD00BD002E /* LaunchSplash.xib in Resources */,
 				AB181E692BC32FDE00BD002E /* Assets.xcassets in Resources */,
@@ -374,10 +454,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB181E632BC32FDD00BD002E /* AppDelegate.swift in Sources */,
+				AB181E8D2BC35A6300BD002E /* HomeView.swift in Sources */,
+				AB181E8E2BC35A6300BD002E /* HomeViewModel.swift in Sources */,
+				AB181E8F2BC35A6300BD002E /* HomeWireframe.swift in Sources */,
 				AB181E0F2BC32FDD00BD002E /* BaseActions.swift in Sources */,
 				AB181E542BC32FDD00BD002E /* LaunchView.swift in Sources */,
 				AB181E452BC32FDD00BD002E /* UIApplication+Window.swift in Sources */,
 				AB181E232BC32FDD00BD002E /* BaseViewModel.swift in Sources */,
+				AB181E942BC36B7700BD002E /* ProfileSelectorCell.swift in Sources */,
 				AB181E192BC32FDD00BD002E /* BaseError.swift in Sources */,
 				AB181E312BC32FDD00BD002E /* ApiClient.swift in Sources */,
 				AB181E252BC32FDD00BD002E /* BaseWireframe.swift in Sources */,
@@ -396,6 +480,10 @@
 				AB181E1B2BC32FDD00BD002E /* BaseLoader.swift in Sources */,
 				AB181E292BC32FDD00BD002E /* BaseSearchBar.swift in Sources */,
 				AB181E4C2BC32FDD00BD002E /* Fonts+Styles.swift in Sources */,
+				AB181E822BC34E2900BD002E /* ProfileSelectorView.swift in Sources */,
+				AB181E832BC34E2900BD002E /* ProfileSelectorViewModel.swift in Sources */,
+				AB181E842BC34E2900BD002E /* ProfileSelectorWireframe.swift in Sources */,
+				AB181E882BC3589900BD002E /* ProfileModel.swift in Sources */,
 				AB181E562BC32FDD00BD002E /* LaunchViewModel.swift in Sources */,
 				AB181E3A2BC32FDD00BD002E /* UserDefaultsCache.swift in Sources */,
 				AB181E212BC32FDD00BD002E /* BaseViewController.swift in Sources */,
@@ -557,11 +645,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Netflim/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "Netflim/Preview\\ Content";
 				DEVELOPMENT_TEAM = V469DAHXMC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Netflim/Info.plist;
+				INFOPLIST_FILE = Netflim/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchSplash.xib;
@@ -592,11 +680,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Netflim/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "Netflim/Preview\\ Content";
 				DEVELOPMENT_TEAM = V469DAHXMC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Netflim/Info.plist;
+				INFOPLIST_FILE = Netflim/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchSplash.xib;
@@ -660,6 +748,14 @@
 				kind = branch;
 			};
 		};
+		AB181E792BC34AB600BD002E /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -672,6 +768,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AB181E752BC3301000BD002E /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
+		};
+		AB181E7A2BC34AB600BD002E /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB181E792BC34AB600BD002E /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

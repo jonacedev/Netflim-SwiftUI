@@ -41,4 +41,8 @@ final class LaunchWireframe: BaseWireframe {
     func preview() -> some View {
         return view
     }
+    
+    func goToProfileSelector() {
+        ProfileSelectorWireframe(navigator: navigator).present()
+    }
 }
