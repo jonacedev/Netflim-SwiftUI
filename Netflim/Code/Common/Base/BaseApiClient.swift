@@ -20,27 +20,24 @@ class BaseAPIClient {
 
     // MARK: - Public method
 
-    func handler(error: Error?) -> BaseError {
-        if isReachable == false { return .noInternetConnection }
-        return .generic
-    }
-
     func requestPublisher<T: Decodable>(path: String,
                                         queryItems: [URLQueryItem]? = nil,
                                         method: HTTPMethod = .get,
-                                        headers: HTTPHeaders,
+                                        headers: HTTPHeaders? = [:],
                                         parameters: Parameters? = nil,
                                         encoding: ParameterEncoding = JSONEncoding.default,
                                         type: T.Type = T.self) -> AnyPublisher<T, BaseError> {
 
-        let url = URL(string: Environment.shared.baseURL)!
+        let baseUrl = URL(string: Environment.shared.baseURL)!
 
-        var urlComponents = URLComponents(url: url.appendingPathComponent(path), resolvingAgainstBaseURL: true)!
+        var urlComponents = URLComponents(url: baseUrl.appendingPathComponent(path), resolvingAgainstBaseURL: true)!
         urlComponents.queryItems = queryItems
         
         let validStatusCode = [200, 300]
         print("\n-->> Request --->\n \(urlComponents)\n\(parameters?.convertToString() ?? "")")
-
+        
+        var headers: HTTPHeaders? = (headers == nil) ? setDefaultHeaders() : headers
+        
         return sesionManager.request(urlComponents.url!, method: method, parameters: parameters, encoding: encoding, headers: headers)
             .validate(statusCode: validStatusCode)
             .publishDecodable(type: T.self, emptyResponseCodes: [200, 204, 205])
@@ -64,26 +61,28 @@ class BaseAPIClient {
             }
             .eraseToAnyPublisher()
     }
-
-    func setBaseHeaders(_ values: [String: String]) -> HTTPHeaders {
-        return HTTPHeaders(values.map { (key, value) in
+    
+    
+    // MARK: - For this app, the token that TMDB api give to us is always the same with a validation of 60 min, so we set a default header always.
+    
+    func setDefaultHeaders() -> HTTPHeaders {
+               
+        let token = Environment.shared.baseToken
+        var headers = [
+            "content-type": "application/json",
+            "Authorization": "Bearer \(token)"
+        ]
+        
+        return HTTPHeaders(headers.map { (key, value) in
             HTTPHeader(name: key, value: value)
         })
     }
 
-    func setAuthHeaders(_ values: [String: String]) -> HTTPHeaders {
-        var headers = setBaseHeaders(values)
-        let cache = SecuredCache()
-        headers.add(HTTPHeader(name: SecuredCacheKey.authToken.name, value: cache.authToken ?? ""))
-        return headers
-    }
-
     // MARK: - Private Method
-
-    private func saveHeaderToken(headers: [AnyHashable: Any]?) {
-        if let authToken = headers?[SecuredCacheKey.authToken.name] as? String {
-            SecuredCache.saveAuthToken(authToken: authToken)
-        }
+    
+    private func handler(error: Error?) -> BaseError {
+        if isReachable == false { return .noInternetConnection }
+        return .generic
     }
 
     private func startListenerReachability() {

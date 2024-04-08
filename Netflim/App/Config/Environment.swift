@@ -14,6 +14,7 @@ final class Environment {
     private let typeFileEnvironment = "plist"
     private let nameFileEnvironment = "Configuration"
     private let keyEnvironmentURL = "baseURL"
+    private let keyEnvironmentToken = "baseToken"
   
     // MARK: - Shared Instance
 
@@ -33,6 +34,10 @@ final class Environment {
 
     var baseURL: String {
         return plistEnvironment?[keyEnvironmentURL] as! String
+    }
+    
+    var baseToken: String {
+        return plistEnvironment?[keyEnvironmentToken] as! String
     }
  
 }

@@ -14,7 +14,8 @@ class BaseViewModel: ObservableObject {
     var cancellables = Set<AnyCancellable>()
     var securedCache = SecuredCache()
     var userDefaults = UserDefaultsCache()
-    //let api = Api.shared
+    let api = ApiClient.shared
+    
     @Published var alert: BaseAlert.Model?
     @Published var loading: Bool?
 
