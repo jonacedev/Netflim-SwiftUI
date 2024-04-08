@@ -21,7 +21,6 @@ struct ProfileSelectorView: View {
                 }
             }
         }
-        .padding(.horizontal, 100)
     }
 }
 
