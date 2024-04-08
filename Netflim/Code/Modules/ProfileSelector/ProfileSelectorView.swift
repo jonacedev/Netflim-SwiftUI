@@ -4,7 +4,6 @@ import SwiftUI
 struct ProfileSelectorView: View {
     
     @StateObject var viewModel: ProfileSelectorViewModel
-    @State private var users: [ProfileModel] = ProfileModel.getDefaultProfiles()
     
     var body: some View {
         BaseView(content: content, vm: viewModel)
@@ -17,16 +16,20 @@ struct ProfileSelectorView: View {
             
             VStack {
                 LazyVGrid(columns: [GridItem(.fixed(115)), GridItem(.fixed(115))], spacing: 35) {
-                    ForEach(0..<users.count, id: \.self) { idx in
-                        ProfileSelectorCell(userModel: users[idx], onTapAction: {
+                    ForEach(viewModel.users, id: \.self) { user in
+                        ProfileSelectorCell(userModel: user, onTapAction: {
                             viewModel.goHome()
                         })
+                        .transition(.move(edge: .bottom))
                     }
                 }
             }
             
             Spacer()
            
+        }
+        .onAppear {
+            viewModel.getUsers()
         }
     }
 }

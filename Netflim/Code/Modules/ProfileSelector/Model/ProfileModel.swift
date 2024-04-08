@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ProfileModel {
+struct ProfileModel: Hashable {
     let image: String
     let name: String
     

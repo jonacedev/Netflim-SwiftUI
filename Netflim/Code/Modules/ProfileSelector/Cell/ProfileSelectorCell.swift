@@ -8,24 +8,25 @@
 import SwiftUI
 
 struct ProfileSelectorCell: View {
-    var userModel: ProfileModel
+    var userModel: ProfileModel?
     var onTapAction: () -> Void
     @State private var isAnimating: Bool = true
     
     var body: some View {
         VStack(spacing: 8) {
-            Image(userModel.image)
+            Image(userModel?.image ?? "")
                 .resizable()
                 .frame(width: 105, height: 105)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
-            Text(userModel.name)
+            Text(userModel?.name ?? "")
                 .font(.headline)
         }
         .onTapGesture {
             onTapAction()
         }
+        .opacity(isAnimating ? 0.4 : 1)
         .scaleEffect(isAnimating ? 1.2 : 1)
-        .animation(.easeInOut(duration: 0.5), value: isAnimating)
+        .animation(.easeInOut(duration: 0.3), value: isAnimating)
         .onAppear {
            isAnimating = false
         }
