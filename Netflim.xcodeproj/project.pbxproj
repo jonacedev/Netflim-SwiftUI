@@ -57,7 +57,6 @@
 		AB181E8D2BC35A6300BD002E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E8A2BC35A6300BD002E /* HomeView.swift */; };
 		AB181E8E2BC35A6300BD002E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E8B2BC35A6300BD002E /* HomeViewModel.swift */; };
 		AB181E8F2BC35A6300BD002E /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E8C2BC35A6300BD002E /* HomeWireframe.swift */; };
-		AB181E912BC3630900BD002E /* AnimateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E902BC3630900BD002E /* AnimateTest.swift */; };
 		AB181E942BC36B7700BD002E /* ProfileSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E932BC36B7600BD002E /* ProfileSelectorCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -102,7 +101,7 @@
 		AB181E622BC32FDD00BD002E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB181E682BC32FDE00BD002E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB181E6B2BC32FDE00BD002E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AB181E782BC3308800BD002E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AB181E782BC3308800BD002E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB181E7C2BC34B0800BD002E /* netflix_anim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = netflix_anim.json; sourceTree = "<group>"; };
 		AB181E7F2BC34E2900BD002E /* ProfileSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelectorView.swift; sourceTree = "<group>"; };
 		AB181E802BC34E2900BD002E /* ProfileSelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelectorViewModel.swift; sourceTree = "<group>"; };
@@ -111,7 +110,6 @@
 		AB181E8A2BC35A6300BD002E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AB181E8B2BC35A6300BD002E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		AB181E8C2BC35A6300BD002E /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
-		AB181E902BC3630900BD002E /* AnimateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateTest.swift; sourceTree = "<group>"; };
 		AB181E932BC36B7600BD002E /* ProfileSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelectorCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,8 +146,7 @@
 		AB181E062BC32FDD00BD002E /* Netflim */ = {
 			isa = PBXGroup;
 			children = (
-				AB181E782BC3308800BD002E /* Info.plist */,
-				AB181E622BC32FDD00BD002E /* AppDelegate.swift */,
+				AB181E952BC3C1B400BD002E /* App */,
 				AB181E0B2BC32FDD00BD002E /* Code */,
 				AB181E072BC32FDD00BD002E /* Resources */,
 				AB181E6A2BC32FDE00BD002E /* Preview Content */,
@@ -171,7 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				AB181E0C2BC32FDD00BD002E /* Common */,
-				AB181E2A2BC32FDD00BD002E /* Config */,
 				AB181E2F2BC32FDD00BD002E /* Api */,
 				AB181E4F2BC32FDD00BD002E /* Modules */,
 			);
@@ -349,7 +345,6 @@
 				AB181E8A2BC35A6300BD002E /* HomeView.swift */,
 				AB181E8B2BC35A6300BD002E /* HomeViewModel.swift */,
 				AB181E8C2BC35A6300BD002E /* HomeWireframe.swift */,
-				AB181E902BC3630900BD002E /* AnimateTest.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -360,6 +355,16 @@
 				AB181E932BC36B7600BD002E /* ProfileSelectorCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		AB181E952BC3C1B400BD002E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AB181E782BC3308800BD002E /* Info.plist */,
+				AB181E622BC32FDD00BD002E /* AppDelegate.swift */,
+				AB181E2A2BC32FDD00BD002E /* Config */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,7 +475,6 @@
 				AB181E362BC32FDD00BD002E /* DeviceInfo.swift in Sources */,
 				AB181E4A2BC32FDD00BD002E /* UIColors+Style.swift in Sources */,
 				AB181E4E2BC32FDD00BD002E /* Styles.swift in Sources */,
-				AB181E912BC3630900BD002E /* AnimateTest.swift in Sources */,
 				AB181E152BC32FDD00BD002E /* BaseBlur.swift in Sources */,
 				AB181E272BC32FDD00BD002E /* BaseDropDown.swift in Sources */,
 				AB181E1B2BC32FDD00BD002E /* BaseLoader.swift in Sources */,
@@ -645,7 +649,7 @@
 				DEVELOPMENT_TEAM = V469DAHXMC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Netflim/Info.plist;
+				INFOPLIST_FILE = Netflim/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchSplash.xib;
@@ -680,7 +684,7 @@
 				DEVELOPMENT_TEAM = V469DAHXMC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Netflim/Info.plist;
+				INFOPLIST_FILE = Netflim/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchSplash.xib;

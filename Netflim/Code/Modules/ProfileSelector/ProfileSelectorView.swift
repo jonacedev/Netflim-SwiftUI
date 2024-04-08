@@ -5,21 +5,28 @@ struct ProfileSelectorView: View {
     
     @StateObject var viewModel: ProfileSelectorViewModel
     @State private var users: [ProfileModel] = ProfileModel.getDefaultProfiles()
-    @State private var isAnimating: Bool = true
     
     var body: some View {
         BaseView(content: content, vm: viewModel)
     }
     
     @ViewBuilder private func content() -> some View {
-        VStack {
-            LazyVGrid(columns: [GridItem(.fixed(120)), GridItem(.fixed(120))], spacing: 35) {
-                ForEach(0..<users.count, id: \.self) { idx in
-                    ProfileSelectorCell(userModel: users[idx], onTapAction: {
-                        viewModel.goHome()
-                    })
+        VStack(spacing: 90) {
+            Text("¿Quien eres? Elige tu perfil")
+                .font(.system(size: 22).bold())
+            
+            VStack {
+                LazyVGrid(columns: [GridItem(.fixed(115)), GridItem(.fixed(115))], spacing: 35) {
+                    ForEach(0..<users.count, id: \.self) { idx in
+                        ProfileSelectorCell(userModel: users[idx], onTapAction: {
+                            viewModel.goHome()
+                        })
+                    }
                 }
             }
+            
+            Spacer()
+           
         }
     }
 }
