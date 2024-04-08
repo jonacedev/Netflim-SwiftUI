@@ -11,6 +11,7 @@ struct ProfileSelectorCell: View {
     var userModel: ProfileModel?
     var onTapAction: () -> Void
     @State private var isAnimating: Bool = true
+    @State private var tapAnimation: Bool = false
     
     var body: some View {
         VStack(spacing: 8) {
@@ -22,11 +23,16 @@ struct ProfileSelectorCell: View {
                 .font(.headline)
         }
         .onTapGesture {
-            onTapAction()
+            tapAnimation = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
+                tapAnimation = false
+                onTapAction()
+            })
+          
         }
-        .opacity(isAnimating ? 0.4 : 1)
-        .scaleEffect(isAnimating ? 1.2 : 1)
-        .animation(.easeInOut(duration: 0.3), value: isAnimating)
+        .opacity(isAnimating || tapAnimation ? 0.4 : 1)
+        .scaleEffect(isAnimating ? 1.2 : tapAnimation ? 0.98 : 1)
+        .animation(.easeInOut(duration: 0.4), value: isAnimating)
         .onAppear {
            isAnimating = false
         }
