@@ -12,7 +12,7 @@ final class Environment {
     // MARK: - Constant
 
     private let typeFileEnvironment = "plist"
-    private let nameFileEnvironment = "Configuration"
+    private let nameFileEnvironment = "Config"
     private let keyEnvironmentURL = "baseURL"
     private let keyEnvironmentToken = "baseToken"
   

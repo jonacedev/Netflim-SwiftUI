@@ -8,9 +8,14 @@ struct HomeView: View {
     var body: some View {
         BaseView(content: content, vm: viewModel)
     }
-
+    
     @ViewBuilder private func content() -> some View {
-        Text("Hola mundo")
+        VStack {
+           Text("Hola mundo")
+        }
+        .onAppear() {
+            viewModel.onAppear()
+        }
     }
 }
 

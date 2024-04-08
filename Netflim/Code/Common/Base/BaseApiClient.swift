@@ -20,23 +20,26 @@ class BaseAPIClient {
 
     // MARK: - Public method
 
-    func requestPublisher<T: Decodable>(path: String,
+    func requestPublisher<T: Decodable>(path: String?,
                                         queryItems: [URLQueryItem]? = nil,
                                         method: HTTPMethod = .get,
-                                        headers: HTTPHeaders? = [:],
+                                        headers: HTTPHeaders? = nil,
                                         parameters: Parameters? = nil,
                                         encoding: ParameterEncoding = JSONEncoding.default,
                                         type: T.Type = T.self) -> AnyPublisher<T, BaseError> {
 
         let baseUrl = URL(string: Environment.shared.baseURL)!
+        guard let absoluteURL = URL(string: baseUrl.appendingPathComponent(path!).absoluteString.removingPercentEncoding ?? "") else {
+            return Fail(error: BaseError.generic).eraseToAnyPublisher()
+        }
 
-        var urlComponents = URLComponents(url: baseUrl.appendingPathComponent(path), resolvingAgainstBaseURL: true)!
+        var urlComponents = URLComponents(url: absoluteURL, resolvingAgainstBaseURL: true)!
         urlComponents.queryItems = queryItems
         
         let validStatusCode = [200, 300]
         print("\n-->> Request --->\n \(urlComponents)\n\(parameters?.convertToString() ?? "")")
         
-        var headers: HTTPHeaders? = (headers == nil) ? setDefaultHeaders() : headers
+        let headers: HTTPHeaders? = (headers == nil) ? setDefaultHeaders() : headers
         
         return sesionManager.request(urlComponents.url!, method: method, parameters: parameters, encoding: encoding, headers: headers)
             .validate(statusCode: validStatusCode)

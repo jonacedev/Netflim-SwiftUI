@@ -58,6 +58,7 @@
 		AB181E8E2BC35A6300BD002E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E8B2BC35A6300BD002E /* HomeViewModel.swift */; };
 		AB181E8F2BC35A6300BD002E /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E8C2BC35A6300BD002E /* HomeWireframe.swift */; };
 		AB181E942BC36B7700BD002E /* ProfileSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E932BC36B7600BD002E /* ProfileSelectorCell.swift */; };
+		AB181E982BC47C9F00BD002E /* FilmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E972BC47C9F00BD002E /* FilmModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +112,7 @@
 		AB181E8B2BC35A6300BD002E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		AB181E8C2BC35A6300BD002E /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
 		AB181E932BC36B7600BD002E /* ProfileSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelectorCell.swift; sourceTree = "<group>"; };
+		AB181E972BC47C9F00BD002E /* FilmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,6 +344,7 @@
 		AB181E892BC35A5600BD002E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				AB181E962BC47C9300BD002E /* Model */,
 				AB181E8A2BC35A6300BD002E /* HomeView.swift */,
 				AB181E8B2BC35A6300BD002E /* HomeViewModel.swift */,
 				AB181E8C2BC35A6300BD002E /* HomeWireframe.swift */,
@@ -365,6 +368,14 @@
 				AB181E2A2BC32FDD00BD002E /* Config */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		AB181E962BC47C9300BD002E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB181E972BC47C9F00BD002E /* FilmModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -478,6 +489,7 @@
 				AB181E152BC32FDD00BD002E /* BaseBlur.swift in Sources */,
 				AB181E272BC32FDD00BD002E /* BaseDropDown.swift in Sources */,
 				AB181E1B2BC32FDD00BD002E /* BaseLoader.swift in Sources */,
+				AB181E982BC47C9F00BD002E /* FilmModel.swift in Sources */,
 				AB181E292BC32FDD00BD002E /* BaseSearchBar.swift in Sources */,
 				AB181E4C2BC32FDD00BD002E /* Fonts+Styles.swift in Sources */,
 				AB181E822BC34E2900BD002E /* ProfileSelectorView.swift in Sources */,
