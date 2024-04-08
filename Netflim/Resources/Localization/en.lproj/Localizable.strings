@@ -33,3 +33,7 @@
 "general_share" = "Compartir";
 "general_close" = "Cerrar";
 
+// Profile Selector view
+
+"profile_selector_header_title" = "¿Quien eres? Elige tu perfil";
+

@@ -12,7 +12,7 @@ struct ProfileSelectorView: View {
     
     @ViewBuilder private func content() -> some View {
         VStack(spacing: 90) {
-            Text("¿Quien eres? Elige tu perfil")
+            Text("profile_selector_header_title".localized)
                 .font(.system(size: 22).bold())
             
             VStack {
