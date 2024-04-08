@@ -38,7 +38,7 @@ class BaseAPIClient {
         var urlComponents = URLComponents(url: url.appendingPathComponent(path), resolvingAgainstBaseURL: true)!
         urlComponents.queryItems = queryItems
         
-        var validStatusCode = [200, 300]
+        let validStatusCode = [200, 300]
         print("\n-->> Request --->\n \(urlComponents)\n\(parameters?.convertToString() ?? "")")
 
         return sesionManager.request(urlComponents.url!, method: method, parameters: parameters, encoding: encoding, headers: headers)

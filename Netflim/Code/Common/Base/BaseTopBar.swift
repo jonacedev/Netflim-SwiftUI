@@ -27,7 +27,7 @@ struct BaseTopBar: View {
                         Button {
                             model.back?()
                         } label: {
-                            Image(systemName: "chevron.left")
+                            Image(icon)
                                 .renderingMode(.template)
                                 .foregroundStyle(.black)
                         }
