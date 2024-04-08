@@ -2,6 +2,7 @@
 
 
 import SwiftUI
+import Lottie
 
 struct LaunchView: View {
     @StateObject var viewModel: LaunchViewModel
@@ -12,7 +13,12 @@ struct LaunchView: View {
 
     @ViewBuilder private func content() -> some View {
         ZStack {
-            //Image("ic_launch_logo")
+            LottieView(animation: .named("netflix_anim"))
+                .playing(loopMode: .playOnce)
+                .animationDidFinish({ completed in
+                    viewModel.goToProfileSelector()
+                })
+                .frame(width: 470, height: 370)
         }
     }
 }

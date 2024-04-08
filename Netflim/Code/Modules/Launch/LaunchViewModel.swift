@@ -45,11 +45,7 @@ final class LaunchViewModel: BaseViewModel {
     }
 
     private func goFirstScreen() {
-        if userDefaults.shouldRememberUser == true {
-            //goHome()
-        } else {
-            //goLogin()
-        }
+        
     }
 
     // MARK: -  Check if is a simulator
@@ -57,12 +53,8 @@ final class LaunchViewModel: BaseViewModel {
         return TARGET_OS_SIMULATOR != 0
     }
     
-    func goLogin() {
-        //LoginWireframe(navigator: navigator).present()
-    }
-    
-    func goHome() {
-        //HomeWireframe(navigator: navigator).present()
+    func goToProfileSelector() {
+        wireframe.goToProfileSelector()
     }
 
 }

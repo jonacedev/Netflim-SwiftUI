@@ -12,3 +12,24 @@
 "error_generic" = "An error has occurred. Please try another time";
 "error_no_internet_connection" = "There is no Internet conection";
 "error_credential" = "The username or password is not correct";
+
+// Rooted
+
+"rooted_title" = "Dispositivo inseguro";
+"rooted_description" = "Hemos detectado su dispositivo como inseguro";
+
+
+// General
+
+"general_ok" = "Ok";
+"general_accept" = "Aceptar";
+"general_cancel" = "Cancelar";
+"general_copied" = "Copiado";
+"general_skip" = "Omitir";
+"general_next" = "Siguiente";
+"general_update" = "Actualizar";
+"general_send" = "Enviar";
+"general_confirm" = "Confirmar";
+"general_share" = "Compartir";
+"general_close" = "Cerrar";
+
