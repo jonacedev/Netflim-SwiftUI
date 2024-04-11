@@ -24,9 +24,7 @@
 		AB181E2C2BC32FDD00BD002E /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E2B2BC32FDD00BD002E /* Environment.swift */; };
 		AB181E2E2BC32FDD00BD002E /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB181E2D2BC32FDD00BD002E /* Config.plist */; };
 		AB181E312BC32FDD00BD002E /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E302BC32FDD00BD002E /* ApiClient.swift */; };
-		AB181E342BC32FDD00BD002E /* BiometricManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E332BC32FDD00BD002E /* BiometricManager.swift */; };
 		AB181E362BC32FDD00BD002E /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E352BC32FDD00BD002E /* DeviceInfo.swift */; };
-		AB181E382BC32FDD00BD002E /* SecuredCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E372BC32FDD00BD002E /* SecuredCache.swift */; };
 		AB181E3A2BC32FDD00BD002E /* UserDefaultsCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E392BC32FDD00BD002E /* UserDefaultsCache.swift */; };
 		AB181E3D2BC32FDD00BD002E /* Alamofire+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E3C2BC32FDD00BD002E /* Alamofire+Utils.swift */; };
 		AB181E3F2BC32FDD00BD002E /* Strings+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E3E2BC32FDD00BD002E /* Strings+Utils.swift */; };
@@ -79,9 +77,7 @@
 		AB181E2B2BC32FDD00BD002E /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		AB181E2D2BC32FDD00BD002E /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		AB181E302BC32FDD00BD002E /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
-		AB181E332BC32FDD00BD002E /* BiometricManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricManager.swift; sourceTree = "<group>"; };
 		AB181E352BC32FDD00BD002E /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
-		AB181E372BC32FDD00BD002E /* SecuredCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecuredCache.swift; sourceTree = "<group>"; };
 		AB181E392BC32FDD00BD002E /* UserDefaultsCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsCache.swift; sourceTree = "<group>"; };
 		AB181E3C2BC32FDD00BD002E /* Alamofire+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Utils.swift"; sourceTree = "<group>"; };
 		AB181E3E2BC32FDD00BD002E /* Strings+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Utils.swift"; sourceTree = "<group>"; };
@@ -226,9 +222,7 @@
 		AB181E322BC32FDD00BD002E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				AB181E332BC32FDD00BD002E /* BiometricManager.swift */,
 				AB181E352BC32FDD00BD002E /* DeviceInfo.swift */,
-				AB181E372BC32FDD00BD002E /* SecuredCache.swift */,
 				AB181E392BC32FDD00BD002E /* UserDefaultsCache.swift */,
 			);
 			path = Utils;
@@ -473,7 +467,6 @@
 				AB181E312BC32FDD00BD002E /* ApiClient.swift in Sources */,
 				AB181E252BC32FDD00BD002E /* BaseWireframe.swift in Sources */,
 				AB181E432BC32FDD00BD002E /* SwiftUI+Utils.swift in Sources */,
-				AB181E382BC32FDD00BD002E /* SecuredCache.swift in Sources */,
 				AB181E2C2BC32FDD00BD002E /* Environment.swift in Sources */,
 				AB181E172BC32FDD00BD002E /* BaseButton.swift in Sources */,
 				AB181E412BC32FDD00BD002E /* Number+Utils.swift in Sources */,
@@ -497,7 +490,6 @@
 				AB181E212BC32FDD00BD002E /* BaseViewController.swift in Sources */,
 				AB181E132BC32FDD00BD002E /* BaseApiClient.swift in Sources */,
 				AB181E3D2BC32FDD00BD002E /* Alamofire+Utils.swift in Sources */,
-				AB181E342BC32FDD00BD002E /* BiometricManager.swift in Sources */,
 				AB181E1F2BC32FDD00BD002E /* BaseView.swift in Sources */,
 				AB181E1D2BC32FDD00BD002E /* BaseTopBar.swift in Sources */,
 				AB181E112BC32FDD00BD002E /* BaseAlert.swift in Sources */,

@@ -12,7 +12,6 @@ class BaseViewModel: ObservableObject {
     // MARK: - Properties
 
     var cancellables = Set<AnyCancellable>()
-    var securedCache = SecuredCache()
     var userDefaults = UserDefaultsCache()
     let api = ApiClient.shared
     
