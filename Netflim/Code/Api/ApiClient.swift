@@ -5,7 +5,6 @@
 //  Created by Jonathan Onrubia Solis on 20/3/24.
 //
 
-import Alamofire
 import Combine
 import Foundation
 
