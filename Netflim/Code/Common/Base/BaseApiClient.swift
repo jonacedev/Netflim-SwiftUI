@@ -7,6 +7,11 @@
 
 import Foundation
 
+struct ApiError: Decodable {
+    let success: Bool?
+    let status_message: String?
+}
+
 enum HTTPMethod: String {
     case get = "GET"
     case post = "POST"
@@ -38,16 +43,25 @@ class BaseApiClient {
             request.addValue(value, forHTTPHeaderField: key)
         }
         
-        do {
-            let (data, response) = try await URLSession.shared.data(for: request)
-            
-            guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-                throw BaseError.generic
-            }
-            
-            return try JSONDecoder().decode(T.self, from: data)
-        } catch {
+    
+        let (data, response) = try await URLSession.shared.data(for: request)
+        
+        guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
+            throw handleError(data: data)
+        }
+        
+        if let response = try? JSONDecoder().decode(T.self, from: data) {
+            return response
+        } else {
             throw BaseError.generic
+        }
+    }
+    
+    private func handleError(data: Data) -> BaseError {
+        if let apiError = try? JSONDecoder().decode(ApiError.self, from: data) {
+            return BaseError.api(apiError)
+        } else {
+            return BaseError.generic
         }
     }
     

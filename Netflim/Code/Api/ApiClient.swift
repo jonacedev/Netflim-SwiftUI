@@ -19,7 +19,7 @@ final class ApiClient: BaseApiClient {
     
     func getPopularMovies() async throws -> FilmModel {
         
-        let path = "movie/popar?language=es-ES&page=1"
+        let path = "movie/popular"
         let queryItems = [URLQueryItem(name: "language", value: "es-ES"), URLQueryItem(name: "page", value: "1"), URLQueryItem(name: "include_video", value: "true")]
         let headers = setDefaultHeaders()
         
