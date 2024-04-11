@@ -55,6 +55,8 @@
 		AB181E8F2BC35A6300BD002E /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E8C2BC35A6300BD002E /* HomeWireframe.swift */; };
 		AB181E942BC36B7700BD002E /* ProfileSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E932BC36B7600BD002E /* ProfileSelectorCell.swift */; };
 		AB181E982BC47C9F00BD002E /* FilmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E972BC47C9F00BD002E /* FilmModel.swift */; };
+		AB59A2022BC87B8A00978DB3 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = AB59A2012BC87B8A00978DB3 /* SDWebImageSwiftUI */; };
+		AB59A2052BC89B9400978DB3 /* GridHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB59A2042BC89B9400978DB3 /* GridHomeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +109,7 @@
 		AB181E8C2BC35A6300BD002E /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
 		AB181E932BC36B7600BD002E /* ProfileSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelectorCell.swift; sourceTree = "<group>"; };
 		AB181E972BC47C9F00BD002E /* FilmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmModel.swift; sourceTree = "<group>"; };
+		AB59A2042BC89B9400978DB3 /* GridHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridHomeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB59A2022BC87B8A00978DB3 /* SDWebImageSwiftUI in Frameworks */,
 				AB181E7B2BC34AB600BD002E /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +338,7 @@
 		AB181E892BC35A5600BD002E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				AB59A2032BC89B0F00978DB3 /* Cell */,
 				AB181E962BC47C9300BD002E /* Model */,
 				AB181E8A2BC35A6300BD002E /* HomeView.swift */,
 				AB181E8B2BC35A6300BD002E /* HomeViewModel.swift */,
@@ -368,6 +373,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		AB59A2032BC89B0F00978DB3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AB59A2042BC89B9400978DB3 /* GridHomeCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -386,6 +399,7 @@
 			name = Netflim;
 			packageProductDependencies = (
 				AB181E7A2BC34AB600BD002E /* Lottie */,
+				AB59A2012BC87B8A00978DB3 /* SDWebImageSwiftUI */,
 			);
 			productName = Netflim;
 			productReference = AB181E042BC32FDD00BD002E /* Netflim.app */;
@@ -418,6 +432,7 @@
 			mainGroup = AB181DFB2BC32FDD00BD002E;
 			packageReferences = (
 				AB181E792BC34AB600BD002E /* XCRemoteSwiftPackageReference "lottie-spm" */,
+				AB59A2002BC87B8A00978DB3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = AB181E052BC32FDD00BD002E /* Products */;
 			projectDirPath = "";
@@ -470,6 +485,7 @@
 				AB181E582BC32FDD00BD002E /* LaunchWireframe.swift in Sources */,
 				AB181E362BC32FDD00BD002E /* DeviceInfo.swift in Sources */,
 				AB181E4A2BC32FDD00BD002E /* UIColors+Style.swift in Sources */,
+				AB59A2052BC89B9400978DB3 /* GridHomeCell.swift in Sources */,
 				AB181E4E2BC32FDD00BD002E /* Styles.swift in Sources */,
 				AB181E152BC32FDD00BD002E /* BaseBlur.swift in Sources */,
 				AB181E272BC32FDD00BD002E /* BaseDropDown.swift in Sources */,
@@ -736,6 +752,14 @@
 				minimumVersion = 4.4.2;
 			};
 		};
+		AB59A2002BC87B8A00978DB3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -743,6 +767,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AB181E792BC34AB600BD002E /* XCRemoteSwiftPackageReference "lottie-spm" */;
 			productName = Lottie;
+		};
+		AB59A2012BC87B8A00978DB3 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB59A2002BC87B8A00978DB3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

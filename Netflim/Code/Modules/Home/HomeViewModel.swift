@@ -8,10 +8,9 @@ final class HomeViewModel: BaseViewModel {
     
     // MARK: - Properties
     
-    @Published var filmsGlobalModel: [FilmModel] = []
-    var popularModel: FilmModel?
-    var topRatedModel: FilmModel?
-    var upcomingModel: FilmModel?
+    @Published var popularModel: FilmModel?
+    @Published var topRatedModel: FilmModel?
+    @Published var upcomingModel: FilmModel?
     
     private let wireframe: HomeWireframe
     
@@ -24,43 +23,44 @@ final class HomeViewModel: BaseViewModel {
     
     func onAppear() { }
     
+    
+    // MARK: - API
+    
     @MainActor func getAllInfo() async {
-        await self.getPopularMovies()
-        await self.getTopRatedMovies()
-        await self.getUpcomingMovies()
-        
-        [popularModel, topRatedModel, upcomingModel].compactMap{$0}.forEach {
-            filmsGlobalModel.append($0)
-        }
-        
+        showLoading()
+        popularModel = await self.getPopularMovies()
+        topRatedModel = await self.getTopRatedMovies()
+        upcomingModel = await self.getUpcomingMovies()
+        hideLoading()
     }
     
-    private func getPopularMovies() async {
+    private func getPopularMovies() async -> FilmModel? {
         do {
             let response = try await api.getPopularMovies()
-            self.popularModel = FilmModel(page: response.page, films: response.films, category: .popular)
-            print(response)
+            return FilmModel(page: response.page, films: response.films, category: .popular)
         } catch {
-            print(error)
             await manageError(error: error as? BaseError ?? .generic)
+            return nil
         }
     }
     
-    private func getTopRatedMovies() async {
+    private func getTopRatedMovies() async -> FilmModel? {
         do {
             let response = try await api.getTopRatedMovies()
-            self.topRatedModel = FilmModel(page: response.page, films: response.films, category: .topRated)
+            return FilmModel(page: response.page, films: response.films, category: .topRated)
         } catch {
             await manageError(error: error as? BaseError ?? .generic)
+            return nil
         }
     }
     
-    private func getUpcomingMovies() async {
+    private func getUpcomingMovies() async -> FilmModel? {
         do {
             let response = try await api.getUpcomingMovies()
-            self.upcomingModel = FilmModel(page: response.page, films: response.films, category: .upcoming)
+            return FilmModel(page: response.page, films: response.films, category: .upcoming)
         } catch {
             await manageError(error: error as? BaseError ?? .generic)
+            return nil
         }
     }
 }

@@ -41,4 +41,9 @@ struct Film: Codable {
     let release_date: String?
     let genres: [Int]?
     let adult: Bool?
+    
+    func imageUrl() -> URL? {
+        guard let url = URL(string: "https://image.tmdb.org/t/p/w500\(poster_path ?? backdrop_path ?? "")" ) else { return nil }
+        return url
+    }
 }
