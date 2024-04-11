@@ -11,10 +11,10 @@ struct HomeView: View {
     
     @ViewBuilder private func content() -> some View {
         VStack {
-           Text("Hola mundo")
+            Text(viewModel.filmsGlobalModel.first?.films?.first?.title ?? "")
         }
-        .onAppear() {
-            viewModel.onAppear()
+        .task {
+            await viewModel.getMovies()
         }
     }
 }

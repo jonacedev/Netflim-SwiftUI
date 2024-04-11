@@ -9,7 +9,7 @@ import Alamofire
 import Combine
 import Foundation
 
-final class ApiClient: BaseAPIClient {
+final class ApiClient: BaseApiClient {
     
     // MARK: - Shared Instance
     
@@ -17,28 +17,22 @@ final class ApiClient: BaseAPIClient {
     
     // MARK: - Public Functions
     
-    func getPopularMovies() -> AnyPublisher<FilmModel, BaseError> {
+    func getPopularMovies() async throws -> FilmModel {
         
-        let path = "movie/popular?language=es-ES&page=1"
+        let path = "movie/popar?language=es-ES&page=1"
         let queryItems = [URLQueryItem(name: "language", value: "es-ES"), URLQueryItem(name: "page", value: "1"), URLQueryItem(name: "include_video", value: "true")]
-      
-        return requestPublisher(path: path,
-                                queryItems: queryItems,
-                                method: .get,
-                                encoding: JSONEncoding.default,
-                                type: FilmModel.self)
+        let headers = setDefaultHeaders()
+        
+        return try await request(path: path, method: .get, queryItems: queryItems, headers: headers)
     }
     
-    func getTopRatedMovies() -> AnyPublisher<FilmModel, BaseError> {
-      
+    func getTopRatedMovies() async throws -> FilmModel {
+        
         let path = "movie/top_rated"
         let queryItems = [URLQueryItem(name: "language", value: "es-ES"), URLQueryItem(name: "page", value: "1"), URLQueryItem(name: "include_video", value: "true")]
+        let headers = setDefaultHeaders()
         
-        return requestPublisher(path: path,
-                                queryItems: queryItems,
-                                method: .get,
-                                encoding: JSONEncoding.default,
-                                type: FilmModel.self)
+        return try await request(path: path, method: .get, queryItems: queryItems, headers: headers)
     }
-
+    
 }
