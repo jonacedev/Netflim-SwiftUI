@@ -44,7 +44,6 @@
 		AB181E632BC32FDD00BD002E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E622BC32FDD00BD002E /* AppDelegate.swift */; };
 		AB181E692BC32FDE00BD002E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB181E682BC32FDE00BD002E /* Assets.xcassets */; };
 		AB181E6C2BC32FDE00BD002E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB181E6B2BC32FDE00BD002E /* Preview Assets.xcassets */; };
-		AB181E772BC3301000BD002E /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = AB181E762BC3301000BD002E /* KeychainAccess */; };
 		AB181E7B2BC34AB600BD002E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AB181E7A2BC34AB600BD002E /* Lottie */; };
 		AB181E7D2BC34B0800BD002E /* netflix_anim.json in Resources */ = {isa = PBXBuildFile; fileRef = AB181E7C2BC34B0800BD002E /* netflix_anim.json */; };
 		AB181E822BC34E2900BD002E /* ProfileSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E7F2BC34E2900BD002E /* ProfileSelectorView.swift */; };
@@ -115,7 +114,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB181E772BC3301000BD002E /* KeychainAccess in Frameworks */,
 				AB181E7B2BC34AB600BD002E /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,7 +385,6 @@
 			);
 			name = Netflim;
 			packageProductDependencies = (
-				AB181E762BC3301000BD002E /* KeychainAccess */,
 				AB181E7A2BC34AB600BD002E /* Lottie */,
 			);
 			productName = Netflim;
@@ -420,7 +417,6 @@
 			);
 			mainGroup = AB181DFB2BC32FDD00BD002E;
 			packageReferences = (
-				AB181E752BC3301000BD002E /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				AB181E792BC34AB600BD002E /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = AB181E052BC32FDD00BD002E /* Products */;
@@ -732,14 +728,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		AB181E752BC3301000BD002E /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		AB181E792BC34AB600BD002E /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
@@ -751,11 +739,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AB181E762BC3301000BD002E /* KeychainAccess */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AB181E752BC3301000BD002E /* XCRemoteSwiftPackageReference "KeychainAccess" */;
-			productName = KeychainAccess;
-		};
 		AB181E7A2BC34AB600BD002E /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AB181E792BC34AB600BD002E /* XCRemoteSwiftPackageReference "lottie-spm" */;
