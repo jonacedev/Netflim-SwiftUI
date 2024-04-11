@@ -14,7 +14,7 @@ struct HomeView: View {
             Text(viewModel.filmsGlobalModel.first?.films?.first?.title ?? "")
         }
         .task {
-            await viewModel.getMovies()
+            await viewModel.getAllInfo()
         }
     }
 }

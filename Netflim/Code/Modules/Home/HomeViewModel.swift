@@ -11,6 +11,7 @@ final class HomeViewModel: BaseViewModel {
     @Published var filmsGlobalModel: [FilmModel] = []
     var popularModel: FilmModel?
     var topRatedModel: FilmModel?
+    var upcomingModel: FilmModel?
     
     private let wireframe: HomeWireframe
     
@@ -23,12 +24,12 @@ final class HomeViewModel: BaseViewModel {
     
     func onAppear() { }
     
-    @MainActor func getMovies() async {
-        
+    @MainActor func getAllInfo() async {
         await self.getPopularMovies()
         await self.getTopRatedMovies()
+        await self.getUpcomingMovies()
         
-        [popularModel, topRatedModel].compactMap{$0}.forEach {
+        [popularModel, topRatedModel, upcomingModel].compactMap{$0}.forEach {
             filmsGlobalModel.append($0)
         }
         
@@ -36,17 +37,28 @@ final class HomeViewModel: BaseViewModel {
     
     private func getPopularMovies() async {
         do {
-            let response = try await ApiClient.shared.getPopularMovies()
+            let response = try await api.getPopularMovies()
             self.popularModel = FilmModel(page: response.page, films: response.films, category: .popular)
+            print(response)
         } catch {
+            print(error)
             await manageError(error: error as? BaseError ?? .generic)
         }
     }
     
     private func getTopRatedMovies() async {
         do {
-            let response = try await ApiClient.shared.getTopRatedMovies()
+            let response = try await api.getTopRatedMovies()
             self.topRatedModel = FilmModel(page: response.page, films: response.films, category: .topRated)
+        } catch {
+            await manageError(error: error as? BaseError ?? .generic)
+        }
+    }
+    
+    private func getUpcomingMovies() async {
+        do {
+            let response = try await api.getUpcomingMovies()
+            self.upcomingModel = FilmModel(page: response.page, films: response.films, category: .upcoming)
         } catch {
             await manageError(error: error as? BaseError ?? .generic)
         }

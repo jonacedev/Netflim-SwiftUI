@@ -10,6 +10,7 @@ import Foundation
 enum FilmCategory: Codable {
     case popular
     case topRated
+    case upcoming
 }
 
 struct FilmModel: Codable {

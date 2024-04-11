@@ -35,4 +35,13 @@ final class ApiClient: BaseApiClient {
         return try await request(path: path, method: .get, queryItems: queryItems, headers: headers)
     }
     
+    func getUpcomingMovies() async throws -> FilmModel {
+    
+        let path = "movie/upcoming"
+        let queryItems = [URLQueryItem(name: "language", value: "es-ES"), URLQueryItem(name: "page", value: "1"), URLQueryItem(name: "include_video", value: "true")]
+        let headers = setDefaultHeaders()
+        
+        return try await request(path: path, method: .get, queryItems: queryItems, headers: headers)
+    }
+    
 }

@@ -46,7 +46,6 @@
 		AB181E632BC32FDD00BD002E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E622BC32FDD00BD002E /* AppDelegate.swift */; };
 		AB181E692BC32FDE00BD002E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB181E682BC32FDE00BD002E /* Assets.xcassets */; };
 		AB181E6C2BC32FDE00BD002E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB181E6B2BC32FDE00BD002E /* Preview Assets.xcassets */; };
-		AB181E742BC3300100BD002E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AB181E732BC3300100BD002E /* Alamofire */; };
 		AB181E772BC3301000BD002E /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = AB181E762BC3301000BD002E /* KeychainAccess */; };
 		AB181E7B2BC34AB600BD002E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AB181E7A2BC34AB600BD002E /* Lottie */; };
 		AB181E7D2BC34B0800BD002E /* netflix_anim.json in Resources */ = {isa = PBXBuildFile; fileRef = AB181E7C2BC34B0800BD002E /* netflix_anim.json */; };
@@ -121,7 +120,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB181E772BC3301000BD002E /* KeychainAccess in Frameworks */,
-				AB181E742BC3300100BD002E /* Alamofire in Frameworks */,
 				AB181E7B2BC34AB600BD002E /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,7 +393,6 @@
 			);
 			name = Netflim;
 			packageProductDependencies = (
-				AB181E732BC3300100BD002E /* Alamofire */,
 				AB181E762BC3301000BD002E /* KeychainAccess */,
 				AB181E7A2BC34AB600BD002E /* Lottie */,
 			);
@@ -429,7 +426,6 @@
 			);
 			mainGroup = AB181DFB2BC32FDD00BD002E;
 			packageReferences = (
-				AB181E722BC3300100BD002E /* XCRemoteSwiftPackageReference "Alamofire" */,
 				AB181E752BC3301000BD002E /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				AB181E792BC34AB600BD002E /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
@@ -744,14 +740,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		AB181E722BC3300100BD002E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.9.1;
-			};
-		};
 		AB181E752BC3301000BD002E /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
@@ -771,11 +759,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AB181E732BC3300100BD002E /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AB181E722BC3300100BD002E /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
 		AB181E762BC3301000BD002E /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AB181E752BC3301000BD002E /* XCRemoteSwiftPackageReference "KeychainAccess" */;
