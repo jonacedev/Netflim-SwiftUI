@@ -28,6 +28,7 @@ struct ProfileSelectorView: View {
             Spacer()
            
         }
+        .padding(.top, 20)
         .onAppear {
             viewModel.getUsers()
         }

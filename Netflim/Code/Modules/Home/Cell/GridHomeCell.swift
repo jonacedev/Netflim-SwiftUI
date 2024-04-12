@@ -22,7 +22,7 @@ struct GridHomeCell: View {
                         WebImage(url: film.imageUrl())
                             .resizable()
                             .scaledToFill()
-                            .frame(width: 130, height: 180)
+                            .frame(width: 120, height: 170)
                             .clipShape(RoundedCorner(radius: 8))
                     }
                 }

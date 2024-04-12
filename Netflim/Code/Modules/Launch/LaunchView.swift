@@ -18,7 +18,7 @@ struct LaunchView: View {
                 .animationDidFinish({ completed in
                     viewModel.goToProfileSelector()
                 })
-                .frame(width: 470, height: 370)
+                .frame(width: 500, height: 400)
         }
     }
 }

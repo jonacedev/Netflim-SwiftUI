@@ -14,10 +14,10 @@ struct HomeView: View {
         ScrollView {
             VStack() {
             
-                WebImage(url: viewModel.popularModel?.films?.first?.imageUrl())
+                WebImage(url: viewModel.popularModel?.films?.last?.imageUrl())
                     .resizable()
                     .scaledToFill()
-                    .frame(width: 360, height: 500)
+                    .frame(width: 350, height: 470)
                     .clipShape(RoundedCorner(radius: 8))
                     .overlay {
                         LinearGradient(gradient: Gradient(colors: [.clear, .clear, .clear, .black.opacity(0.2)]),
@@ -26,11 +26,11 @@ struct HomeView: View {
                     }
                     .overlay(alignment: .bottom) {
                         HStack(spacing: 12) {
-                            BaseButton(style: .secondary, text: "Reproducir", height: 45, action: {
+                            BaseButton(style: .secondary, text: "Reproducir", height: 40, action: {
                                 
                             })
                             
-                            BaseButton(style: .secondary, text: "Mi lista", height: 45, action: {
+                            BaseButton(style: .secondary, text: "Mi lista", height: 40, action: {
                                 
                             })
                         }
