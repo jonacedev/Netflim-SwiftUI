@@ -19,11 +19,24 @@ struct GridHomeCell: View {
             ScrollView(.horizontal) {
                 LazyHGrid(rows: [GridItem(.fixed(130))]) {
                     ForEach(films, id: \.id) { film in
-                        WebImage(url: film.imageUrl())
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 120, height: 170)
-                            .clipShape(RoundedCorner(radius: 8))
+                        if #available(iOS 17.0, *) {
+                            WebImage(url: film.imageUrl())
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 120, height: 170)
+                                .clipShape(RoundedCorner(radius: 8))
+                                .scrollTransition { content, phase in
+                                    content
+                                        .scaleEffect(phase.isIdentity ? 1 : 0.6)
+                                        .opacity(phase.isIdentity ? 1 : 0)
+                                }
+                        } else {
+                            WebImage(url: film.imageUrl())
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 120, height: 170)
+                                .clipShape(RoundedCorner(radius: 8))
+                        }
                     }
                 }
                 .padding(.horizontal, 5)
@@ -45,11 +58,24 @@ struct GridHomeCell: View {
                 ScrollView(.horizontal) {
                     LazyHGrid(rows: [GridItem(.fixed(130))]) {
                         ForEach(0..<5) { _ in
-                           Image("default_poster")
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 130, height: 180)
-                                .clipShape(RoundedCorner(radius: 8))
+                            if #available(iOS 17.0, *) {
+                                Image("default_poster")
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 130, height: 180)
+                                    .clipShape(RoundedCorner(radius: 8))
+                                    .scrollTransition { content, phase in
+                                        content
+                                            .scaleEffect(phase.isIdentity ? 1 : 0.6)
+                                            .opacity(phase.isIdentity ? 1 : 0)
+                                    }
+                            } else {
+                                Image("default_poster")
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 130, height: 180)
+                                    .clipShape(RoundedCorner(radius: 8))
+                            }
                         }
                     }
                     .padding(.horizontal, 5)
