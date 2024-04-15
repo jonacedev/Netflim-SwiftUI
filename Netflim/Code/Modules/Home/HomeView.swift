@@ -57,15 +57,19 @@ struct HomeView: View {
                 .padding(.top, 20)
                 
             }
-            .task {
+            .onAppear {
                 if !isTaskExecuted {
+                    parentViewModel.profileSelected = parentViewModel.user
                     parentViewModel.profileLoading = true
-                    await viewModel.getAllInfo(success: {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-                            parentViewModel.profileLoading = false
+                    Task {
+                        await viewModel.getAllInfo(success: {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                                parentViewModel.profileLoading = false
+                                isTaskExecuted = true
+                            })
                         })
-                    })
-                    isTaskExecuted = true
+                       
+                    }
                 }
                 
             }

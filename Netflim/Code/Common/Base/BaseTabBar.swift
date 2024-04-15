@@ -38,7 +38,7 @@ struct BaseTabBar: View {
                     }
                     
                     Text(item.text)
-                        .font(.caption2)
+                        .font(.system(size: 10))
                 }
                 .frame(maxWidth: .infinity)
                 .frame(height: height)

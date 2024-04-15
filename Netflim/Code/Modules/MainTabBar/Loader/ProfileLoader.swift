@@ -9,12 +9,14 @@ import SwiftUI
 
 struct ProfileLoader: View {
     @State var isAnimating = true
+    var user: ProfileModel?
+    
     var body: some View {
         ZStack {
             Color.black
                 .ignoresSafeArea()
             VStack(spacing: 70) {
-                Image("user1")
+                Image(user?.image ?? "user1")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 170, height: 170)
