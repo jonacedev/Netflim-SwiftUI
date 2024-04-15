@@ -17,6 +17,7 @@ class BaseViewModel: ObservableObject {
     
     @Published var alert: BaseAlert.Model?
     @Published var loading: Bool?
+    @Published var profileLoading: Bool?
 
     @MainActor func manageError(error: BaseError, wireframe: BaseWireframe? = nil) {
         hideLoading()

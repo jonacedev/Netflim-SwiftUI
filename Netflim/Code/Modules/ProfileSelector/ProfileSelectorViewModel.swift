@@ -33,7 +33,7 @@ final class ProfileSelectorViewModel: BaseViewModel {
         }
     }
     
-    func goHome() {
-        wireframe.goHome()
+    func goHome(user: ProfileModel) {
+        wireframe.goHome(user: user)
     }
 }

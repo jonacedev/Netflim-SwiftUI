@@ -5,6 +5,8 @@ import SDWebImageSwiftUI
 struct HomeView: View {
     
     @StateObject var viewModel: HomeViewModel
+    @EnvironmentObject var parentViewModel: MainTabBarViewModel
+    @State private var isTaskExecuted = false
     
     var body: some View {
         BaseView(content: content, vm: viewModel)
@@ -56,7 +58,16 @@ struct HomeView: View {
                 
             }
             .task {
-                await viewModel.getAllInfo()
+                if !isTaskExecuted {
+                    parentViewModel.profileLoading = true
+                    await viewModel.getAllInfo(success: {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                            parentViewModel.profileLoading = false
+                        })
+                    })
+                    isTaskExecuted = true
+                }
+                
             }
         }
         .scrollIndicators(.hidden)
@@ -64,5 +75,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeWireframe(navigator: nil).preview()
+    MainTabBarWireframe(navigator: nil).preview()
 }

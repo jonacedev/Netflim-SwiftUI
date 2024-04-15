@@ -17,6 +17,7 @@ struct BaseView<Content: View>: View {
             content()
             alert()
             loader()
+            profileLoader()
         }
         .onTapGesture {
               hideKeyboard()
@@ -32,6 +33,12 @@ struct BaseView<Content: View>: View {
     @ViewBuilder func loader() -> some View {
         if vm.loading == true {
             BaseLoader()
+        }
+    }
+    
+    @ViewBuilder func profileLoader() -> some View {
+        if vm.profileLoading == true {
+            ProfileLoader()
         }
     }
 }

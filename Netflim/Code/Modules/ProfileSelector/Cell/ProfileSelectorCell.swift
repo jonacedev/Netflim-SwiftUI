@@ -24,7 +24,7 @@ struct ProfileSelectorCell: View {
         }
         .onTapGesture {
             tapAnimation = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
                 tapAnimation = false
                 onTapAction()
             })

@@ -26,12 +26,11 @@ final class HomeViewModel: BaseViewModel {
     
     // MARK: - API
     
-    @MainActor func getAllInfo() async {
-        showLoading()
+    @MainActor func getAllInfo(success: @escaping () -> Void) async {
         popularModel = await self.getPopularMovies()
         topRatedModel = await self.getTopRatedMovies()
         upcomingModel = await self.getUpcomingMovies()
-        hideLoading()
+        success()
     }
     
     private func getPopularMovies() async -> FilmModel? {
