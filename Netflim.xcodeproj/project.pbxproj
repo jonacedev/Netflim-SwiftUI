@@ -43,7 +43,6 @@
 		AB181E632BC32FDD00BD002E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E622BC32FDD00BD002E /* AppDelegate.swift */; };
 		AB181E692BC32FDE00BD002E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB181E682BC32FDE00BD002E /* Assets.xcassets */; };
 		AB181E6C2BC32FDE00BD002E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB181E6B2BC32FDE00BD002E /* Preview Assets.xcassets */; };
-		AB181E7B2BC34AB600BD002E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AB181E7A2BC34AB600BD002E /* Lottie */; };
 		AB181E7D2BC34B0800BD002E /* netflix_anim.json in Resources */ = {isa = PBXBuildFile; fileRef = AB181E7C2BC34B0800BD002E /* netflix_anim.json */; };
 		AB181E822BC34E2900BD002E /* ProfileSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E7F2BC34E2900BD002E /* ProfileSelectorView.swift */; };
 		AB181E832BC34E2900BD002E /* ProfileSelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E802BC34E2900BD002E /* ProfileSelectorViewModel.swift */; };
@@ -54,8 +53,9 @@
 		AB181E8F2BC35A6300BD002E /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E8C2BC35A6300BD002E /* HomeWireframe.swift */; };
 		AB181E942BC36B7700BD002E /* ProfileSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E932BC36B7600BD002E /* ProfileSelectorCell.swift */; };
 		AB181E982BC47C9F00BD002E /* FilmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E972BC47C9F00BD002E /* FilmModel.swift */; };
-		AB59A2022BC87B8A00978DB3 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = AB59A2012BC87B8A00978DB3 /* SDWebImageSwiftUI */; };
 		AB59A2052BC89B9400978DB3 /* GridHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB59A2042BC89B9400978DB3 /* GridHomeCell.swift */; };
+		AB59A2D32BCD818F00978DB3 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = AB59A2D22BCD818F00978DB3 /* SDWebImageSwiftUI */; };
+		AB59A2D62BCD819700978DB3 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AB59A2D52BCD819700978DB3 /* Lottie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,8 +115,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB59A2022BC87B8A00978DB3 /* SDWebImageSwiftUI in Frameworks */,
-				AB181E7B2BC34AB600BD002E /* Lottie in Frameworks */,
+				AB59A2D32BCD818F00978DB3 /* SDWebImageSwiftUI in Frameworks */,
+				AB59A2D62BCD819700978DB3 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,8 +395,8 @@
 			);
 			name = Netflim;
 			packageProductDependencies = (
-				AB181E7A2BC34AB600BD002E /* Lottie */,
-				AB59A2012BC87B8A00978DB3 /* SDWebImageSwiftUI */,
+				AB59A2D22BCD818F00978DB3 /* SDWebImageSwiftUI */,
+				AB59A2D52BCD819700978DB3 /* Lottie */,
 			);
 			productName = Netflim;
 			productReference = AB181E042BC32FDD00BD002E /* Netflim.app */;
@@ -428,8 +428,8 @@
 			);
 			mainGroup = AB181DFB2BC32FDD00BD002E;
 			packageReferences = (
-				AB181E792BC34AB600BD002E /* XCRemoteSwiftPackageReference "lottie-spm" */,
-				AB59A2002BC87B8A00978DB3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				AB59A2D12BCD818F00978DB3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				AB59A2D42BCD819700978DB3 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = AB181E052BC32FDD00BD002E /* Products */;
 			projectDirPath = "";
@@ -740,15 +740,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		AB181E792BC34AB600BD002E /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.4.2;
-			};
-		};
-		AB59A2002BC87B8A00978DB3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+		AB59A2D12BCD818F00978DB3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
 			requirement = {
@@ -756,18 +748,26 @@
 				minimumVersion = 3.0.2;
 			};
 		};
+		AB59A2D42BCD819700978DB3 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AB181E7A2BC34AB600BD002E /* Lottie */ = {
+		AB59A2D22BCD818F00978DB3 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AB181E792BC34AB600BD002E /* XCRemoteSwiftPackageReference "lottie-spm" */;
-			productName = Lottie;
-		};
-		AB59A2012BC87B8A00978DB3 /* SDWebImageSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AB59A2002BC87B8A00978DB3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			package = AB59A2D12BCD818F00978DB3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		AB59A2D52BCD819700978DB3 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB59A2D42BCD819700978DB3 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
