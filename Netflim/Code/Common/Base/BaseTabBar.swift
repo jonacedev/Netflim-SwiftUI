@@ -53,7 +53,7 @@ struct BaseTabBar: View {
         .padding(.bottom, 25)
         .background {
             Rectangle()
-                .fill(.ultraThinMaterial)
+                .fill(.thickMaterial)
                 .ignoresSafeArea()
         }
     }

@@ -30,9 +30,16 @@ struct MainTabBarView: View {
             
             tabBar()
         }
+        .onAppear {
+            hideDefaultTabBar()
+        }
         .animation(.default, value: viewModel.tabSelection)
         .ignoresSafeArea(edges: .bottom)
             
+    }
+    
+    func hideDefaultTabBar() {
+        UITabBar.appearance().isHidden = true
     }
 
     @ViewBuilder private func tabBar() -> some View {
