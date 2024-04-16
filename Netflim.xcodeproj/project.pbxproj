@@ -66,6 +66,7 @@
 		ABAA68682BCDA2B3003DB93A /* BaseTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA68672BCDA2B3003DB93A /* BaseTabBar.swift */; };
 		ABAA686B2BCDB30D003DB93A /* CircleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA686A2BCDB30D003DB93A /* CircleLoader.swift */; };
 		ABAA686D2BCDDD7A003DB93A /* ProfileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA686C2BCDDD7A003DB93A /* ProfileLoader.swift */; };
+		ABAA68702BCF1C0C003DB93A /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA686F2BCF1C0C003DB93A /* GlobalVariables.swift */; };
 		BFC96D622BCD85D1009054B1 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BFC96D612BCD85D1009054B1 /* SDWebImageSwiftUI */; settings = {ATTRIBUTES = (Weak, ); }; };
 		BFC96D662BCD85F3009054B1 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BFC96D652BCD85F3009054B1 /* Lottie */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -132,6 +133,7 @@
 		ABAA68672BCDA2B3003DB93A /* BaseTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBar.swift; sourceTree = "<group>"; };
 		ABAA686A2BCDB30D003DB93A /* CircleLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleLoader.swift; sourceTree = "<group>"; };
 		ABAA686C2BCDDD7A003DB93A /* ProfileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLoader.swift; sourceTree = "<group>"; };
+		ABAA686F2BCF1C0C003DB93A /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 		AB181E0C2BC32FDD00BD002E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				ABAA686E2BCF1BFB003DB93A /* Configuration */,
 				AB181E0D2BC32FDD00BD002E /* Base */,
 				AB181E322BC32FDD00BD002E /* Utils */,
 				AB181E3B2BC32FDD00BD002E /* Extension */,
@@ -446,6 +449,14 @@
 			path = Loader;
 			sourceTree = "<group>";
 		};
+		ABAA686E2BCF1BFB003DB93A /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				ABAA686F2BCF1C0C003DB93A /* GlobalVariables.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -535,6 +546,7 @@
 				AB181E8E2BC35A6300BD002E /* HomeViewModel.swift in Sources */,
 				AB181E8F2BC35A6300BD002E /* HomeWireframe.swift in Sources */,
 				AB181E0F2BC32FDD00BD002E /* BaseActions.swift in Sources */,
+				ABAA68702BCF1C0C003DB93A /* GlobalVariables.swift in Sources */,
 				AB181E542BC32FDD00BD002E /* LaunchView.swift in Sources */,
 				ABAA686D2BCDDD7A003DB93A /* ProfileLoader.swift in Sources */,
 				AB181E452BC32FDD00BD002E /* UIApplication+Window.swift in Sources */,

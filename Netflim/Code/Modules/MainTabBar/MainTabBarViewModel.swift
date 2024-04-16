@@ -21,8 +21,6 @@ final class MainTabBarViewModel: BaseViewModel {
     lazy var vwNewHot: NewHotView = NewHotWireframe(navigator: wireframe.navigator).view
     lazy var vwProfile: ProfileView = ProfileWireframe(navigator: wireframe.navigator).view
     
-    var user: ProfileModel?
-
     // MARK: - Published
 
     @Published var tabSelection: Int = TabSelection.home.rawValue
@@ -30,9 +28,8 @@ final class MainTabBarViewModel: BaseViewModel {
 
     // MARK: - Init
 
-    init(wireframe: MainTabBarWireframe, user: ProfileModel?) {
+    init(wireframe: MainTabBarWireframe) {
         self.wireframe = wireframe
-        self.user = user
         super.init()
     }
 

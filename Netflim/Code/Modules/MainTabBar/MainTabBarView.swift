@@ -46,7 +46,7 @@ struct MainTabBarView: View {
         BaseTabBar(tabSelected: $viewModel.tabSelection, items: [
             TabItem(text: "Home", image: "house.fill", isProfile: false),
             TabItem(text: "New & Hot".localized, image: "play.rectangle.on.rectangle", isProfile: false),
-            TabItem(text: "My Netflix".localized, image: viewModel.user?.image ?? "user1", isProfile: true)
+            TabItem(text: "My Netflix".localized, image: GlobalVariables.shared.getUserSelected().image, isProfile: true)
         ])
         .onAppear {
             viewModel.readyTab()

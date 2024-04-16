@@ -33,7 +33,8 @@ final class ProfileSelectorViewModel: BaseViewModel {
         }
     }
     
-    func goHome(user: ProfileModel) {
-        wireframe.goHome(user: user)
+    func goHome(userSelected: ProfileModel) {
+        GlobalVariables.shared.userSelected = userSelected
+        wireframe.goHome()
     }
 }

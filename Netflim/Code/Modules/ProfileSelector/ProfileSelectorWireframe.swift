@@ -45,10 +45,8 @@ final class ProfileSelectorWireframe: BaseWireframe {
         back()
     }
     
-    func goHome(user: ProfileModel) {
-        let mainTabBarWireframe = MainTabBarWireframe(navigator: navigator)
-        mainTabBarWireframe.user = user
-        mainTabBarWireframe.present()
+    func goHome() {
+        MainTabBarWireframe(navigator: navigator).present()
     }
     
 }

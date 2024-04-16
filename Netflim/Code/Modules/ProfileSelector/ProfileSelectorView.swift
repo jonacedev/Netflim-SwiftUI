@@ -18,7 +18,7 @@ struct ProfileSelectorView: View {
                 LazyVGrid(columns: [GridItem(.fixed(115)), GridItem(.fixed(115))], spacing: 35) {
                     ForEach(viewModel.users, id: \.self) { user in
                         ProfileSelectorCell(userModel: user, onTapAction: {
-                            viewModel.goHome(user: user)
+                            viewModel.goHome(userSelected: user)
                         })
                         .transition(.move(edge: .bottom))
                     }

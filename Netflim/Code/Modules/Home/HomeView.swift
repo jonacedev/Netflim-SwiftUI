@@ -55,11 +55,9 @@ struct HomeView: View {
                     }
                 }
                 .padding(.top, 20)
-                
             }
             .onAppear {
                 if !isTaskExecuted {
-                    parentViewModel.profileSelected = parentViewModel.user
                     parentViewModel.profileLoading = true
                     Task {
                         await viewModel.getAllInfo(success: {

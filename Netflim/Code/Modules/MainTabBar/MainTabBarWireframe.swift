@@ -6,14 +6,12 @@ final class MainTabBarWireframe: BaseWireframe {
 
     // MARK: - Private Functions
     
-    var user: ProfileModel?
-    
     var view: MainTabBarView {
         MainTabBarView(viewModel: self.viewModel)
     }
     
     private var viewModel: MainTabBarViewModel {
-        return MainTabBarViewModel(wireframe: self, user: user)
+        return MainTabBarViewModel(wireframe: self)
     }
     
     internal override func viewController() -> MainTabBarViewController {

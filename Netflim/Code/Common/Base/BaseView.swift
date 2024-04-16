@@ -38,7 +38,7 @@ struct BaseView<Content: View>: View {
     
     @ViewBuilder func profileLoader() -> some View {
         if vm.profileLoading == true {
-            ProfileLoader(user: vm.profileSelected)
+            ProfileLoader(user: GlobalVariables.shared.getUserSelected())
         }
     }
 }
