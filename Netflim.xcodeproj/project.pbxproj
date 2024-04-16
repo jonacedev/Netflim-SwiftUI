@@ -250,6 +250,7 @@
 		AB181E322BC32FDD00BD002E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				ABAA68692BCDB2FB003DB93A /* Loader */,
 				AB181E352BC32FDD00BD002E /* DeviceInfo.swift */,
 				AB181E392BC32FDD00BD002E /* UserDefaultsCache.swift */,
 			);
@@ -412,7 +413,6 @@
 		ABAA68522BCDA128003DB93A /* MainTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				ABAA68692BCDB2FB003DB93A /* Loader */,
 				ABAA68532BCDA15F003DB93A /* MainTabBarView.swift */,
 				ABAA68542BCDA15F003DB93A /* MainTabBarViewModel.swift */,
 				ABAA68552BCDA15F003DB93A /* MainTabBarWireframe.swift */,
