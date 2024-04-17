@@ -66,6 +66,7 @@
 		ABAA68682BCDA2B3003DB93A /* BaseTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA68672BCDA2B3003DB93A /* BaseTabBar.swift */; };
 		ABAA686B2BCDB30D003DB93A /* CircleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA686A2BCDB30D003DB93A /* CircleLoader.swift */; };
 		ABAA686D2BCDDD7A003DB93A /* ProfileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA686C2BCDDD7A003DB93A /* ProfileLoader.swift */; };
+		BF4393032BCF156300C9A393 /* NewHotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4393022BCF156300C9A393 /* NewHotCell.swift */; };
 		BFC96D622BCD85D1009054B1 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BFC96D612BCD85D1009054B1 /* SDWebImageSwiftUI */; settings = {ATTRIBUTES = (Weak, ); }; };
 		BFC96D662BCD85F3009054B1 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BFC96D652BCD85F3009054B1 /* Lottie */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -132,6 +133,7 @@
 		ABAA68672BCDA2B3003DB93A /* BaseTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBar.swift; sourceTree = "<group>"; };
 		ABAA686A2BCDB30D003DB93A /* CircleLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleLoader.swift; sourceTree = "<group>"; };
 		ABAA686C2BCDDD7A003DB93A /* ProfileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLoader.swift; sourceTree = "<group>"; };
+		BF4393022BCF156300C9A393 /* NewHotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHotCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -420,6 +422,7 @@
 		ABAA68592BCDA1CA003DB93A /* NewHot */ = {
 			isa = PBXGroup;
 			children = (
+				BF4393012BCF154E00C9A393 /* NewHotCell */,
 				ABAA685A2BCDA1FD003DB93A /* NewHotView.swift */,
 				ABAA685B2BCDA1FD003DB93A /* NewHotViewModel.swift */,
 				ABAA685C2BCDA1FD003DB93A /* NewHotWireframe.swift */,
@@ -444,6 +447,14 @@
 				ABAA686A2BCDB30D003DB93A /* CircleLoader.swift */,
 			);
 			path = Loader;
+			sourceTree = "<group>";
+		};
+		BF4393012BCF154E00C9A393 /* NewHotCell */ = {
+			isa = PBXGroup;
+			children = (
+				BF4393022BCF156300C9A393 /* NewHotCell.swift */,
+			);
+			path = NewHotCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -559,6 +570,7 @@
 				AB59A2052BC89B9400978DB3 /* GridHomeCell.swift in Sources */,
 				AB181E4E2BC32FDD00BD002E /* Styles.swift in Sources */,
 				AB181E152BC32FDD00BD002E /* BaseBlur.swift in Sources */,
+				BF4393032BCF156300C9A393 /* NewHotCell.swift in Sources */,
 				AB181E272BC32FDD00BD002E /* BaseDropDown.swift in Sources */,
 				ABAA685D2BCDA1FD003DB93A /* NewHotView.swift in Sources */,
 				ABAA685E2BCDA1FD003DB93A /* NewHotViewModel.swift in Sources */,

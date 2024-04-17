@@ -10,7 +10,7 @@ struct NewHotView: View {
     }
 
     @ViewBuilder private func content() -> some View {
-        Text("New Hot")
+        NewHotCell()
     }
 }
 
