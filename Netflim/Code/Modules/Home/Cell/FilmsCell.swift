@@ -8,7 +8,7 @@
 import SwiftUI
 import SDWebImageSwiftUI
 
-struct GridHomeCell: View {
+struct FilmsCell: View {
     let title: String
     let films: [Film]
     var body: some View {

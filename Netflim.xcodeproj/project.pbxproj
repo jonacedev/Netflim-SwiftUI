@@ -53,7 +53,7 @@
 		AB181E8F2BC35A6300BD002E /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E8C2BC35A6300BD002E /* HomeWireframe.swift */; };
 		AB181E942BC36B7700BD002E /* ProfileSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E932BC36B7600BD002E /* ProfileSelectorCell.swift */; };
 		AB181E982BC47C9F00BD002E /* FilmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB181E972BC47C9F00BD002E /* FilmModel.swift */; };
-		AB59A2052BC89B9400978DB3 /* GridHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB59A2042BC89B9400978DB3 /* GridHomeCell.swift */; };
+		AB59A2052BC89B9400978DB3 /* FilmsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB59A2042BC89B9400978DB3 /* FilmsCell.swift */; };
 		ABAA68562BCDA15F003DB93A /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA68532BCDA15F003DB93A /* MainTabBarView.swift */; };
 		ABAA68572BCDA15F003DB93A /* MainTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA68542BCDA15F003DB93A /* MainTabBarViewModel.swift */; };
 		ABAA68582BCDA15F003DB93A /* MainTabBarWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA68552BCDA15F003DB93A /* MainTabBarWireframe.swift */; };
@@ -67,6 +67,7 @@
 		ABAA686B2BCDB30D003DB93A /* CircleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA686A2BCDB30D003DB93A /* CircleLoader.swift */; };
 		ABAA686D2BCDDD7A003DB93A /* ProfileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA686C2BCDDD7A003DB93A /* ProfileLoader.swift */; };
 		ABAA68702BCF1C0C003DB93A /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA686F2BCF1C0C003DB93A /* GlobalVariables.swift */; };
+		ABAA68742BCF2F1F003DB93A /* ChipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA68732BCF2F1F003DB93A /* ChipCell.swift */; };
 		BFC96D622BCD85D1009054B1 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BFC96D612BCD85D1009054B1 /* SDWebImageSwiftUI */; settings = {ATTRIBUTES = (Weak, ); }; };
 		BFC96D662BCD85F3009054B1 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BFC96D652BCD85F3009054B1 /* Lottie */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -120,7 +121,7 @@
 		AB181E8C2BC35A6300BD002E /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
 		AB181E932BC36B7600BD002E /* ProfileSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelectorCell.swift; sourceTree = "<group>"; };
 		AB181E972BC47C9F00BD002E /* FilmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmModel.swift; sourceTree = "<group>"; };
-		AB59A2042BC89B9400978DB3 /* GridHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridHomeCell.swift; sourceTree = "<group>"; };
+		AB59A2042BC89B9400978DB3 /* FilmsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsCell.swift; sourceTree = "<group>"; };
 		ABAA68532BCDA15F003DB93A /* MainTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarView.swift; sourceTree = "<group>"; };
 		ABAA68542BCDA15F003DB93A /* MainTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewModel.swift; sourceTree = "<group>"; };
 		ABAA68552BCDA15F003DB93A /* MainTabBarWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarWireframe.swift; sourceTree = "<group>"; };
@@ -134,6 +135,7 @@
 		ABAA686A2BCDB30D003DB93A /* CircleLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleLoader.swift; sourceTree = "<group>"; };
 		ABAA686C2BCDDD7A003DB93A /* ProfileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLoader.swift; sourceTree = "<group>"; };
 		ABAA686F2BCF1C0C003DB93A /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		ABAA68732BCF2F1F003DB93A /* ChipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -405,7 +407,8 @@
 		AB59A2032BC89B0F00978DB3 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				AB59A2042BC89B9400978DB3 /* GridHomeCell.swift */,
+				AB59A2042BC89B9400978DB3 /* FilmsCell.swift */,
+				ABAA68732BCF2F1F003DB93A /* ChipCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				AB181E632BC32FDD00BD002E /* AppDelegate.swift in Sources */,
 				AB181E8D2BC35A6300BD002E /* HomeView.swift in Sources */,
 				AB181E8E2BC35A6300BD002E /* HomeViewModel.swift in Sources */,
+				ABAA68742BCF2F1F003DB93A /* ChipCell.swift in Sources */,
 				AB181E8F2BC35A6300BD002E /* HomeWireframe.swift in Sources */,
 				AB181E0F2BC32FDD00BD002E /* BaseActions.swift in Sources */,
 				ABAA68702BCF1C0C003DB93A /* GlobalVariables.swift in Sources */,
@@ -568,7 +572,7 @@
 				AB181E582BC32FDD00BD002E /* LaunchWireframe.swift in Sources */,
 				AB181E362BC32FDD00BD002E /* DeviceInfo.swift in Sources */,
 				AB181E4A2BC32FDD00BD002E /* UIColors+Style.swift in Sources */,
-				AB59A2052BC89B9400978DB3 /* GridHomeCell.swift in Sources */,
+				AB59A2052BC89B9400978DB3 /* FilmsCell.swift in Sources */,
 				AB181E4E2BC32FDD00BD002E /* Styles.swift in Sources */,
 				AB181E152BC32FDD00BD002E /* BaseBlur.swift in Sources */,
 				AB181E272BC32FDD00BD002E /* BaseDropDown.swift in Sources */,

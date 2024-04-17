@@ -7,53 +7,72 @@
 import SwiftUI
 
 struct BaseTopBar: View {
-
+    
     struct Model {
         let text: String?
-        var iconLeft: String? = "ic_back" //Default systemImage
         var iconRight: String?
-        var back: (() -> Void)?
+        var iconRight2: String?
         var actionRight: (() -> Void)?
+        var actionRight2: (() -> Void)?
     }
-
-    private let height: CGFloat = 44
+    
+   
     let model: Model
-
+    @State var height: CGFloat = 35
+    @Binding var isOpaque: Bool
+    
     var body: some View {
+        
         VStack {
-            ZStack {
-                HStack {
-                    if let icon = model.iconLeft {
-                        Button {
-                            model.back?()
-                        } label: {
-                            Image(icon)
-                                .renderingMode(.template)
-                                .foregroundStyle(.black)
-                        }
-                    }
-                    Spacer()
-                    if let icon = model.iconRight {
-                        Button(action: {
-                            model.actionRight?()
-                        }, label: {
-                            Image(icon)
-                        })
-                    }
-                }.padding()
-
-                Text(model.text ?? "").font(.headline)
-
+            HStack {
+                Text(model.text ?? "").font(.system(size: 24).bold())
+                    .foregroundStyle(.white)
+                
+                Spacer()
+                
+                if let icon = model.iconRight {
+                    Button(action: {
+                        model.actionRight?()
+                    }, label: {
+                        Image(icon)
+                            .resizable()
+                            .scaledToFill()
+                            .tint(.white)
+                            .frame(width: 28, height: 28)
+                    })
+                }
+                
+                if let icon = model.iconRight2 {
+                    Button(action: {
+                        model.actionRight2?()
+                    }, label: {
+                        Image(icon)
+                            .resizable()
+                            .scaledToFill()
+                            .tint(.white)
+                            .frame(width: 28, height: 28)
+                    })
+                }
             }
-            .frame(height: height)
-            .foregroundStyle(.white)
-            Spacer()
+            .padding(.horizontal, 20)
         }
+        .frame(height: height)
+        .background {
+            if isOpaque {
+                Rectangle()
+                    .fill(.thinMaterial)
+                    .ignoresSafeArea()
+            } else {
+                Color.clear
+            }
+           
+        }
+        
     }
 }
 
 #Preview {
     BaseView(content: {
-        BaseTopBar(model: BaseTopBar.Model(text: "Texto prueba", back: {}))
+        BaseTopBar(model: BaseTopBar.Model(text: "Texto prueba"), isOpaque: .constant(false))
     }, vm: BaseViewModel())
 }
