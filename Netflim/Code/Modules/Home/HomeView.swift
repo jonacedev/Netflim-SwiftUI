@@ -76,10 +76,10 @@ struct HomeView: View {
         WebImage(url: viewModel.popularModel?.films?.last?.imageUrl())
             .resizable()
             .scaledToFill()
-            .frame(maxWidth: .infinity, minHeight: 470)
+            .frame(maxWidth: .infinity, maxHeight: 470)
             .clipShape(RoundedCorner(radius: 8))
             .overlay {
-                LinearGradient(gradient: Gradient(colors: [.clear, .clear, .clear, .black.opacity(0.2)]),
+                LinearGradient(gradient: Gradient(colors: [.clear, .clear, .clear, .black.opacity(0.3)]),
                                startPoint: .top,
                                endPoint: .bottom)
             }
