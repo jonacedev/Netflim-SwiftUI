@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct smallPredefinedButton: View {
+    
+    let imageName: String
+    let title: String
+    
     var body: some View {
         Button(action: {
             print("recuerdámelo pressed")
         }, label: {
             VStack{
-                Image(systemName: "bell.circle")
-                Text("recuérdamelo")
+                Image(systemName: "\(imageName)")
+                Text("\(title)")
                     .font(.system(size: 10))
             }.foregroundColor(.white)
         })
@@ -22,5 +26,5 @@ struct smallPredefinedButton: View {
 }
 
 #Preview {
-    smallPredefinedButton()
+    smallPredefinedButton(imageName: "info.circle", title: "information")
 }

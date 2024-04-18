@@ -24,24 +24,22 @@ struct NewHotCell: View {
             VStack {
                 
                 Image("default_poster")
-
                     .resizable()
                     .scaledToFill()
                     .frame(width: .infinity, height: 200)
                     .clipped()
                 
-                HStack{
+                HStack {
                     Image("image_title")
                         .resizable()
                         .scaledToFit()
                         .padding(.vertical, 20)
                     Spacer()
-                    
-                    smallPredefinedButton()
-                    
-                    smallPredefinedButton()
-                    
+
+                    smallPredefinedButton(imageName: "info.circle", title: "information")
+                    smallPredefinedButton(imageName: "bell", title: "remember me")
                 }
+                
                 VStack (alignment: .leading, spacing: 0) {
                     Text("Estreno de la serie el 26 de abril")
                     
