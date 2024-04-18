@@ -66,6 +66,7 @@
 		ABAA68682BCDA2B3003DB93A /* BaseTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA68672BCDA2B3003DB93A /* BaseTabBar.swift */; };
 		ABAA686B2BCDB30D003DB93A /* CircleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA686A2BCDB30D003DB93A /* CircleLoader.swift */; };
 		ABAA686D2BCDDD7A003DB93A /* ProfileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA686C2BCDDD7A003DB93A /* ProfileLoader.swift */; };
+		BF0ED9472BD0F81F0072F805 /* smallPredefinedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0ED9462BD0F81F0072F805 /* smallPredefinedButton.swift */; };
 		BF4393032BCF156300C9A393 /* NewHotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4393022BCF156300C9A393 /* NewHotCell.swift */; };
 		BFC96D622BCD85D1009054B1 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BFC96D612BCD85D1009054B1 /* SDWebImageSwiftUI */; settings = {ATTRIBUTES = (Weak, ); }; };
 		BFC96D662BCD85F3009054B1 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BFC96D652BCD85F3009054B1 /* Lottie */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -133,6 +134,7 @@
 		ABAA68672BCDA2B3003DB93A /* BaseTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBar.swift; sourceTree = "<group>"; };
 		ABAA686A2BCDB30D003DB93A /* CircleLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleLoader.swift; sourceTree = "<group>"; };
 		ABAA686C2BCDDD7A003DB93A /* ProfileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLoader.swift; sourceTree = "<group>"; };
+		BF0ED9462BD0F81F0072F805 /* smallPredefinedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smallPredefinedButton.swift; sourceTree = "<group>"; };
 		BF4393022BCF156300C9A393 /* NewHotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHotCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -251,6 +253,7 @@
 			children = (
 				AB181E352BC32FDD00BD002E /* DeviceInfo.swift */,
 				AB181E392BC32FDD00BD002E /* UserDefaultsCache.swift */,
+				BF0ED9462BD0F81F0072F805 /* smallPredefinedButton.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -592,6 +595,7 @@
 				AB181E132BC32FDD00BD002E /* BaseApiClient.swift in Sources */,
 				AB181E1F2BC32FDD00BD002E /* BaseView.swift in Sources */,
 				AB181E1D2BC32FDD00BD002E /* BaseTopBar.swift in Sources */,
+				BF0ED9472BD0F81F0072F805 /* smallPredefinedButton.swift in Sources */,
 				AB181E112BC32FDD00BD002E /* BaseAlert.swift in Sources */,
 				AB181E482BC32FDD00BD002E /* Colors+Style.swift in Sources */,
 			);

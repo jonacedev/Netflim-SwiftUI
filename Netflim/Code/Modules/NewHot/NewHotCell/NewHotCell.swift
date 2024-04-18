@@ -37,24 +37,10 @@ struct NewHotCell: View {
                         .padding(.vertical, 20)
                     Spacer()
                     
-                    Button(action: {
-                        print("recuerdámelo pressed")
-                    }, label: {
-                        VStack{
-                            Image(systemName: "bell.circle")
-                            Text("recuérdamelo")
-                                .font(.system(size: 10))
-                        }.foregroundColor(.white)
-                    })
-                    Button(action: {
-                        print("info. pressed")
-                    }, label: {
-                        VStack{
-                            Image(systemName: "info.circle")
-                            Text("Información")
-                                .font(.system(size: 10))
-                        }.foregroundColor(.white)
-                    })
+                    smallPredefinedButton()
+                    
+                    smallPredefinedButton()
+                    
                 }
                 VStack (alignment: .leading, spacing: 0) {
                     Text("Estreno de la serie el 26 de abril")
