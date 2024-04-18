@@ -43,6 +43,10 @@ class BaseWireframe {
     func back() {
         navigator?.popViewController(animated: true)
     }
+    
+    func dismissModal() {
+        navigator?.dismiss(animated: true)
+    }
 
     func popToRoot() {
         navigator?.popToRootViewController(animated: true)

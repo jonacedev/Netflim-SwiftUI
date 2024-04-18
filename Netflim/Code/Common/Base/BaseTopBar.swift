@@ -36,7 +36,7 @@ struct BaseTopBar: View {
                     }, label: {
                         Image(icon)
                             .resizable()
-                            .scaledToFill()
+                            .scaledToFit()
                             .tint(.white)
                             .frame(width: 28, height: 28)
                     })
@@ -48,7 +48,7 @@ struct BaseTopBar: View {
                     }, label: {
                         Image(icon)
                             .resizable()
-                            .scaledToFill()
+                            .scaledToFit()
                             .tint(.white)
                             .frame(width: 28, height: 28)
                     })

@@ -1,4 +1,5 @@
 {
+  "originHash" : "a060d43e9fedd3eefb6ca9c774a4e6c419b400bf0da52c04512ad3f98418221f",
   "pins" : [
     {
       "identity" : "lottie-spm",
@@ -26,7 +27,16 @@
         "revision" : "22423b017b99ab8ac44e29e6372f571f782af6e4",
         "version" : "3.0.2"
       }
+    },
+    {
+      "identity" : "youtubeplayerkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SvenTiigi/YouTubePlayerKit.git",
+      "state" : {
+        "revision" : "5ade0dfbabaf7456069b4e8f604de261bf6d7c67",
+        "version" : "1.8.0"
+      }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

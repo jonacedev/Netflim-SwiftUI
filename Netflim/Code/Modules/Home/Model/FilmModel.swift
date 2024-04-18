@@ -43,7 +43,12 @@ struct Film: Codable {
     let adult: Bool?
     
     func imageUrl() -> URL? {
-        guard let url = URL(string: "https://image.tmdb.org/t/p/w500\(poster_path ?? backdrop_path ?? "")" ) else { return nil }
+        guard let url = URL(string: "https://image.tmdb.org/t/p/w500\(poster_path ?? "")" ) else { return nil }
+        return url
+    }
+    
+    func detailImageUrl() -> URL? {
+        guard let url = URL(string: "https://image.tmdb.org/t/p/w500\(backdrop_path ?? "")" ) else { return nil }
         return url
     }
 }

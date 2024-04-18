@@ -62,4 +62,8 @@ final class HomeViewModel: BaseViewModel {
             return nil
         }
     }
+    
+    func goDetail(film: Film) {
+        wireframe.goDetail(film: film)
+    }
 }

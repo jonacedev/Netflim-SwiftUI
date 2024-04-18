@@ -28,7 +28,7 @@ final class ApiClient: BaseApiClient {
     func getTopRatedMovies() async throws -> FilmModel {
         
         let path = "movie/top_rated"
-        let queryItems = [URLQueryItem(name: "language", value: "es-ES"), URLQueryItem(name: "page", value: "1"), URLQueryItem(name: "include_video", value: "true")]
+        let queryItems = [URLQueryItem(name: "language", value: "es-ES"), URLQueryItem(name: "page", value: "1")]
         let headers = setDefaultHeaders()
         
         return try await request(path: path, method: .get, queryItems: queryItems, headers: headers)
@@ -37,7 +37,16 @@ final class ApiClient: BaseApiClient {
     func getUpcomingMovies() async throws -> FilmModel {
     
         let path = "movie/upcoming"
-        let queryItems = [URLQueryItem(name: "language", value: "es-ES"), URLQueryItem(name: "page", value: "1"), URLQueryItem(name: "include_video", value: "true")]
+        let queryItems = [URLQueryItem(name: "language", value: "es-ES"), URLQueryItem(name: "page", value: "1")]
+        let headers = setDefaultHeaders()
+        
+        return try await request(path: path, method: .get, queryItems: queryItems, headers: headers)
+    }
+    
+    func getTrailer(videoId: Int) async throws -> VideoModel {
+    
+        let path = "movie/\(videoId)/videos"
+        let queryItems = [URLQueryItem(name: "language", value: "es-ES")]
         let headers = setDefaultHeaders()
         
         return try await request(path: path, method: .get, queryItems: queryItems, headers: headers)

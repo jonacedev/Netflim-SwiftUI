@@ -73,7 +73,7 @@ struct HomeView: View {
     }
     
     @ViewBuilder private func bodyImage() -> some View {
-        WebImage(url: viewModel.popularModel?.films?.last?.imageUrl())
+        WebImage(url: viewModel.popularModel?.films?.first?.imageUrl())
             .resizable()
             .scaledToFill()
             .frame(maxWidth: .infinity, maxHeight: 470)
@@ -86,7 +86,9 @@ struct HomeView: View {
             .overlay(alignment: .bottom) {
                 HStack(spacing: 12) {
                     BaseButton(style: .secondary, text: "Reproducir", height: 40, action: {
-                        
+                        if let film = viewModel.popularModel?.films?.first {
+                            viewModel.goDetail(film: film)
+                        }
                     })
                     
                     BaseButton(style: .secondary, text: "Mi lista", height: 40, action: {
@@ -103,15 +105,22 @@ struct HomeView: View {
         VStack(spacing: 30) {
             
             if let popularFilms = viewModel.popularModel?.films {
-                FilmsCell(title: "Popular movies", films: popularFilms)
+                FilmsCell(title: "Popular movies", films: popularFilms, tapFilm: { film in
+                    viewModel.goDetail(film: film)
+                })
             }
             
             if let topRatedFilms = viewModel.topRatedModel?.films {
-                FilmsCell(title: "Top Rated movies", films: topRatedFilms)
+                FilmsCell(title: "Top Rated movies", films: topRatedFilms, tapFilm: { film in
+                    viewModel.goDetail(film: film)
+                })
             }
             
             if let upcomingFilms = viewModel.upcomingModel?.films {
-                FilmsCell(title: "Upcoming", films: upcomingFilms)
+                FilmsCell(title: "Upcoming", films: upcomingFilms, tapFilm: {
+                    film in
+                    viewModel.goDetail(film: film)
+                })
             }
         }
         .padding(.top, 20)

@@ -45,6 +45,10 @@ final class HomeWireframe: BaseWireframe {
         back()
     }
     
+    func goDetail(film: Film) {
+        DetailWireframe(navigator: navigator).presentModal(film: film)
+    }
+    
 }
 
 

@@ -68,6 +68,11 @@
 		ABAA686D2BCDDD7A003DB93A /* ProfileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA686C2BCDDD7A003DB93A /* ProfileLoader.swift */; };
 		ABAA68702BCF1C0C003DB93A /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA686F2BCF1C0C003DB93A /* GlobalVariables.swift */; };
 		ABAA68742BCF2F1F003DB93A /* ChipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA68732BCF2F1F003DB93A /* ChipCell.swift */; };
+		ABAA687B2BD17EE8003DB93A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA68782BD17EE8003DB93A /* DetailView.swift */; };
+		ABAA687C2BD17EE8003DB93A /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA68792BD17EE8003DB93A /* DetailViewModel.swift */; };
+		ABAA687D2BD17EE8003DB93A /* DetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA687A2BD17EE8003DB93A /* DetailWireframe.swift */; };
+		ABAA68802BD1838F003DB93A /* YouTubePlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = ABAA687F2BD1838F003DB93A /* YouTubePlayerKit */; };
+		ABAA68842BD19304003DB93A /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA68832BD19304003DB93A /* VideoModel.swift */; };
 		BFC96D622BCD85D1009054B1 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BFC96D612BCD85D1009054B1 /* SDWebImageSwiftUI */; settings = {ATTRIBUTES = (Weak, ); }; };
 		BFC96D662BCD85F3009054B1 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BFC96D652BCD85F3009054B1 /* Lottie */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -136,6 +141,10 @@
 		ABAA686C2BCDDD7A003DB93A /* ProfileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLoader.swift; sourceTree = "<group>"; };
 		ABAA686F2BCF1C0C003DB93A /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		ABAA68732BCF2F1F003DB93A /* ChipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipCell.swift; sourceTree = "<group>"; };
+		ABAA68782BD17EE8003DB93A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		ABAA68792BD17EE8003DB93A /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		ABAA687A2BD17EE8003DB93A /* DetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWireframe.swift; sourceTree = "<group>"; };
+		ABAA68832BD19304003DB93A /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +154,7 @@
 			files = (
 				BFC96D622BCD85D1009054B1 /* SDWebImageSwiftUI in Frameworks */,
 				BFC96D662BCD85F3009054B1 /* Lottie in Frameworks */,
+				ABAA68802BD1838F003DB93A /* YouTubePlayerKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +262,7 @@
 		AB181E322BC32FDD00BD002E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				ABAA68812BD19006003DB93A /* Buttons */,
 				ABAA68692BCDB2FB003DB93A /* Loader */,
 				AB181E352BC32FDD00BD002E /* DeviceInfo.swift */,
 				AB181E392BC32FDD00BD002E /* UserDefaultsCache.swift */,
@@ -284,6 +295,7 @@
 		AB181E4F2BC32FDD00BD002E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				ABAA68772BD17EC2003DB93A /* Detail */,
 				ABAA68602BCDA206003DB93A /* Profile */,
 				ABAA68592BCDA1CA003DB93A /* NewHot */,
 				ABAA68522BCDA128003DB93A /* MainTabBar */,
@@ -460,6 +472,32 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		ABAA68772BD17EC2003DB93A /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				ABAA68822BD192D7003DB93A /* Model */,
+				ABAA68782BD17EE8003DB93A /* DetailView.swift */,
+				ABAA68792BD17EE8003DB93A /* DetailViewModel.swift */,
+				ABAA687A2BD17EE8003DB93A /* DetailWireframe.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		ABAA68812BD19006003DB93A /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		ABAA68822BD192D7003DB93A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ABAA68832BD19304003DB93A /* VideoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -479,6 +517,7 @@
 			packageProductDependencies = (
 				BFC96D612BCD85D1009054B1 /* SDWebImageSwiftUI */,
 				BFC96D652BCD85F3009054B1 /* Lottie */,
+				ABAA687F2BD1838F003DB93A /* YouTubePlayerKit */,
 			);
 			productName = Netflim;
 			productReference = AB181E042BC32FDD00BD002E /* Netflim.app */;
@@ -512,6 +551,7 @@
 			packageReferences = (
 				BFC96D5F2BCD852C009054B1 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				BFC96D602BCD8534009054B1 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+				ABAA687E2BD1838F003DB93A /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */,
 			);
 			productRefGroup = AB181E052BC32FDD00BD002E /* Products */;
 			projectDirPath = "";
@@ -576,10 +616,14 @@
 				AB181E4E2BC32FDD00BD002E /* Styles.swift in Sources */,
 				AB181E152BC32FDD00BD002E /* BaseBlur.swift in Sources */,
 				AB181E272BC32FDD00BD002E /* BaseDropDown.swift in Sources */,
+				ABAA687B2BD17EE8003DB93A /* DetailView.swift in Sources */,
+				ABAA687C2BD17EE8003DB93A /* DetailViewModel.swift in Sources */,
+				ABAA687D2BD17EE8003DB93A /* DetailWireframe.swift in Sources */,
 				ABAA685D2BCDA1FD003DB93A /* NewHotView.swift in Sources */,
 				ABAA685E2BCDA1FD003DB93A /* NewHotViewModel.swift in Sources */,
 				ABAA685F2BCDA1FD003DB93A /* NewHotWireframe.swift in Sources */,
 				AB181E1B2BC32FDD00BD002E /* BaseLoader.swift in Sources */,
+				ABAA68842BD19304003DB93A /* VideoModel.swift in Sources */,
 				AB181E982BC47C9F00BD002E /* FilmModel.swift in Sources */,
 				ABAA68642BCDA214003DB93A /* ProfileView.swift in Sources */,
 				ABAA68652BCDA214003DB93A /* ProfileViewModel.swift in Sources */,
@@ -836,6 +880,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		ABAA687E2BD1838F003DB93A /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SvenTiigi/YouTubePlayerKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.0;
+			};
+		};
 		BFC96D5F2BCD852C009054B1 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
@@ -855,6 +907,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		ABAA687F2BD1838F003DB93A /* YouTubePlayerKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABAA687E2BD1838F003DB93A /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */;
+			productName = YouTubePlayerKit;
+		};
 		BFC96D612BCD85D1009054B1 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BFC96D5F2BCD852C009054B1 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;

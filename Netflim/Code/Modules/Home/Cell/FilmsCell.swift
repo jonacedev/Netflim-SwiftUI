@@ -11,6 +11,7 @@ import SDWebImageSwiftUI
 struct FilmsCell: View {
     let title: String
     let films: [Film]
+    let tapFilm: (Film) -> Void
     var body: some View {
         VStack(alignment: .leading) {
             Text(title)
@@ -30,12 +31,18 @@ struct FilmsCell: View {
                                         .scaleEffect(phase.isIdentity ? 1 : 0.6)
                                         .opacity(phase.isIdentity ? 1 : 0)
                                 }
+                                .onTapGesture {
+                                    tapFilm(film)
+                                }
                         } else {
                             WebImage(url: film.imageUrl())
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: 120, height: 170)
                                 .clipShape(RoundedCorner(radius: 8))
+                                .onTapGesture {
+                                    tapFilm(film)
+                                }
                         }
                     }
                 }
