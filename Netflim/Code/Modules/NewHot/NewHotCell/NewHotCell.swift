@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct NewHotCell: View {
+    
     var body: some View {
-        HStack(alignment: .top){ 
+        HStack(alignment: .top){
             
-            VStack{
+            VStack{  //MARK: - Deja espacio despues de un "Stack_{"
                 Text("ABR")
                     .font(.system(size: 25))
                     .fontWeight(.light)
@@ -24,13 +25,13 @@ struct NewHotCell: View {
             VStack {
                 
                 Image("default_poster")
-
+                    //MARK: - Espacio out
                     .resizable()
                     .scaledToFill()
                     .frame(width: .infinity, height: 200)
                     .clipped()
                 
-                HStack{
+                HStack{ //MARK: - Deja espacio despues de un "Stack_{"
                     Image("image_title")
                         .resizable()
                         .scaledToFit()
@@ -41,8 +42,8 @@ struct NewHotCell: View {
                     
                     smallPredefinedButton()
                     
-                }
-                VStack (alignment: .leading, spacing: 0) {
+                } //MARK: - Deja salto de linea"
+                VStack (alignment: .leading, spacing: 0) {  //MARK: - No dejes espacio depues del Vstack_() cuando son parentesis"
                     Text("Estreno de la serie el 26 de abril")
                     
                     Image("netflix_icon_serie")
@@ -59,6 +60,7 @@ struct NewHotCell: View {
                         .foregroundColor(.gray)
                         .padding(.bottom, 10)
                         .padding(.top, 10)
+                        //MARK: - Usa padding(.vertical, 10) y resumes el .bottom & .top en una linea"
                      
                     Text("Descarnada • Sombría • Misterio • Investigación • Española")
                         .font(.system(size: 12))
