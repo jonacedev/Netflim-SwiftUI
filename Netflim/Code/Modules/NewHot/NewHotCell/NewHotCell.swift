@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct NewHotCell: View {
+    
     var body: some View {
-        HStack(alignment: .top){ 
+        HStack(alignment: .top){
             
-            VStack{
+            VStack {
                 Text("ABR")
                     .font(.system(size: 25))
                     .fontWeight(.light)
@@ -19,7 +20,7 @@ struct NewHotCell: View {
                 Text("26")
                     .font(.system(size: 30))
                     .fontWeight(.bold)
-            } 
+            }
             
             VStack {
                 
@@ -34,9 +35,11 @@ struct NewHotCell: View {
                         .resizable()
                         .scaledToFit()
                         .padding(.vertical, 20)
+                    
                     Spacer()
-
+                    
                     smallPredefinedButton(imageName: "info.circle", title: "information")
+                    
                     smallPredefinedButton(imageName: "bell", title: "remember me")
                 }
                 
@@ -55,9 +58,8 @@ struct NewHotCell: View {
                     Text("Cuando un matrimonio denuncia la desaparición de su hija de 12 años, la investigación no tarda en volverse contra ellos. Basada en hechos reales.")
                         .font(.system(size: 14))
                         .foregroundColor(.gray)
-                        .padding(.bottom, 10)
-                        .padding(.top, 10)
-                     
+                        .padding(.vertical, 10)
+
                     Text("Descarnada • Sombría • Misterio • Investigación • Española")
                         .font(.system(size: 12))
                 }
@@ -65,7 +67,6 @@ struct NewHotCell: View {
         }
     }
 }
-
-#Preview {
-    NewHotCell()
-}
+    #Preview {
+        NewHotCell()
+    }
