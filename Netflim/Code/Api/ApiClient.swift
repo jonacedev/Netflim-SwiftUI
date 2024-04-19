@@ -43,4 +43,5 @@ final class ApiClient: BaseApiClient {
         return try await request(path: path, method: .get, queryItems: queryItems, headers: headers)
     }
     
+    
 }

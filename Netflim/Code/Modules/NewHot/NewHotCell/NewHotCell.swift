@@ -8,16 +8,24 @@
 import SwiftUI
 
 struct NewHotCell: View {
-    
+ 
+    let title: String
+    let description: String
+    let videoUrl: String
+    let logoUrl: String
+    let genres: String
+    let releaseDateDay: String
+    let releaseDateMonth: String
+
     var body: some View {
         HStack(alignment: .top){
             
             VStack {
-                Text("ABR")
+                Text(releaseDateMonth)
                     .font(.system(size: 25))
                     .fontWeight(.light)
                     .foregroundStyle(.gray)
-                Text("26")
+                Text(releaseDateDay)
                     .font(.system(size: 30))
                     .fontWeight(.bold)
             }
@@ -27,7 +35,7 @@ struct NewHotCell: View {
                 Image("default_poster")
                     .resizable()
                     .scaledToFill()
-                    .frame(width: .infinity, height: 200)
+                    .frame(width: .infinity, height: 200) //me sale warning de Invalid frame dimension (negative or non-finite). ver qué es
                     .clipped()
                 
                 HStack {
@@ -44,14 +52,14 @@ struct NewHotCell: View {
                 }
                 
                 VStack (alignment: .leading, spacing: 0) {
-                    Text("Estreno de la serie el 26 de abril")
+                    Text("Estreno de la serie el \(releaseDateDay) de \(releaseDateMonth)")
                     
                     Image("netflix_icon_serie")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 80, height: 40, alignment: .leading)
                     
-                    Text("El caso Asunta")
+                    Text(title)
                         .fontWeight(.bold)
                         .font(.system(size: 20))
                     
@@ -59,8 +67,10 @@ struct NewHotCell: View {
                         .font(.system(size: 14))
                         .foregroundColor(.gray)
                         .padding(.vertical, 10)
+                        .frame(height: 80) // sé que frame limita pero no si no se me pone solo en una línea
+                        
 
-                    Text("Descarnada • Sombría • Misterio • Investigación • Española")
+                    Text(genres)
                         .font(.system(size: 12))
                 }
             }
@@ -68,5 +78,5 @@ struct NewHotCell: View {
     }
 }
     #Preview {
-        NewHotCell()
+        NewHotCell(title: "Amadeus", description: "Wolfgang Amadeus Mozart is a remarkably talented young Viennese composer who unwittingly finds a fierce rival in the disciplined and determined Antonio Salieri. Resenting Mozart for both his hedonistic lifestyle and his undeniable talent, the highly religious Salieri is gradually consumed by his jealousy and becomes obsessed with Mozart's downfall, leading to a devious scheme that has dire consequences for both men.", videoUrl: "", logoUrl: "", genres: "History, Music, Drama", releaseDateDay: "08", releaseDateMonth: "Abril")
     }

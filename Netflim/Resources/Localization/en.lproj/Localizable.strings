@@ -32,6 +32,7 @@
 "general_confirm" = "Confirmar";
 "general_share" = "Compartir";
 "general_close" = "Cerrar";
+"general_information" =  "Information";
 
 // Profile Selector view
 
